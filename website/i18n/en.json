@@ -5,33 +5,32 @@
     "previous": "Previous",
     "tagline": "A website for testing",
     "docs": {
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
-      },
       "doc2": {
         "title": "document number 2"
       },
       "doc3": {
         "title": "This is document number 3"
       },
-      "doc4": {
-        "title": "Other Document"
+      "en/getting-started": {
+        "title": "Getting Started"
       },
-      "doc5": {
-        "title": "Fifth Document"
+      "es/inicio": {
+        "title": "Inicio"
+      },
+      "home": {
+        "title": "Home",
+        "sidebar_label": "home"
       }
     },
     "links": {
       "Docs": "Docs",
-      "API": "API",
       "Help": "Help",
       "Blog": "Blog"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "English": "English",
+      "Español": "Español",
+      "Home": "Home"
     }
   },
   "pages-strings": {
