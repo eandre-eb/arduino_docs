@@ -5,12 +5,6 @@
     "previous": "Previous",
     "tagline": "A website for testing",
     "docs": {
-      "doc2": {
-        "title": "document number 2"
-      },
-      "doc3": {
-        "title": "This is document number 3"
-      },
       "en/getting-started": {
         "title": "Getting Started"
       },
