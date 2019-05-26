@@ -9,10 +9,10 @@
         <generator>Feed for Node.js</generator>
         <image>
             <title>Arduino Docs Blog</title>
-            <url>https://cristianemoyano.github.io/arduino_docs/img/favicon.ico</url>
+            <url>https://cristianemoyano.github.io/arduino_docs/img/favicon.png</url>
             <link>https://cristianemoyano.github.io/arduino_docs/blog</link>
         </image>
-        <copyright>Copyright © 2019 Your Name or Your Company Name</copyright>
+        <copyright>2019 Cristian Moyano</copyright>
         <item>
             <title><![CDATA[New Version 1.0.0]]></title>
             <link>https://cristianemoyano.github.io/arduino_docs/blog/2017/10/24/new-version-1.0.0.html</link>

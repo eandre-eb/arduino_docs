@@ -9,6 +9,7 @@
 <url> <loc>https://cristianemoyano.github.io/arduino_docs/blog/2017/04/10/blog-post-two</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://cristianemoyano.github.io/arduino_docs/blog/2016/03/11/blog-post</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://cristianemoyano.github.io/arduino_docs/docs/en/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://cristianemoyano.github.io/arduino_docs/docs/en/getting-started" /> </url>
+<url> <loc>https://cristianemoyano.github.io/arduino_docs/docs/es/ejercicio_uno</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://cristianemoyano.github.io/arduino_docs/docs/es/ejercicio_uno" /> </url>
 <url> <loc>https://cristianemoyano.github.io/arduino_docs/docs/es/inicio</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://cristianemoyano.github.io/arduino_docs/docs/es/inicio" /> </url>
 <url> <loc>https://cristianemoyano.github.io/arduino_docs/docs/home</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://cristianemoyano.github.io/arduino_docs/docs/home" /> </url>
 </urlset>

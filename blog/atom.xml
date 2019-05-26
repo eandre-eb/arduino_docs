@@ -6,8 +6,8 @@
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://cristianemoyano.github.io/arduino_docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Arduino Docs news and events.</subtitle>
-    <logo>https://cristianemoyano.github.io/arduino_docs/img/favicon.ico</logo>
-    <rights>Copyright © 2019 Your Name or Your Company Name</rights>
+    <logo>https://cristianemoyano.github.io/arduino_docs/img/favicon.png</logo>
+    <rights>2019 Cristian Moyano</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://cristianemoyano.github.io/arduino_docs/blog/2017/10/24/new-version-1.0.0.html</id>
