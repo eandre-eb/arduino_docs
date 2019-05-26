@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Arduino Docs', // Title for your website.
-  tagline: 'A website for testing',
+  tagline: 'Un sitio web para aprender sobre la placa Arduino UNO R3',
   url: 'https://cristianemoyano.github.io', // Your website URL
   baseUrl: '/arduino_docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -47,9 +47,9 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: 'img/favicon.png',
+  footerIcon: 'img/favicon.png',
+  favicon: 'img/favicon.png',
 
   /* Colors for website */
   colors: {
@@ -72,15 +72,14 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `${new Date().getFullYear()} Cristian Moyano`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
   },
-
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  // scripts: ['https://buttons.github.io/buttons.js'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',

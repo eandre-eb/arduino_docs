@@ -3,13 +3,16 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "Un sitio web para aprender sobre la placa Arduino UNO R3",
     "docs": {
       "en/getting-started": {
         "title": "Getting Started"
       },
+      "es/ejercicio_uno": {
+        "title": "Ejercicio 1: \"Blink\""
+      },
       "es/inicio": {
-        "title": "Inicio"
+        "title": "Introducción"
       },
       "home": {
         "title": "Home",
