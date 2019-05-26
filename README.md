@@ -14,3 +14,5 @@ Docusaurus requires [Node.js](https://nodejs.org/) to run.
 2. Run ```npm start``` or ```yarn start```.
 
 A browser window will open up at http://localhost:3000.
+
+Website is live at: https://cristianemoyano.github.io/arduino_docs
