@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Ejercicio 1: &quot;Blink&quot; · Arduino Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-1-blink-encender-y-apagar-un-led&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-1-blink-encender-y-apagar-un-led&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 1: &amp;quot;Blink&amp;quot; - Encender y apagar un LED&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Ejercicio 1: &quot;Blink&quot; · Arduino Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cristianemoyano.github.io/arduino_docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-1-blink-encender-y-apagar-un-led&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-1-blink-encender-y-apagar-un-led&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 1: &amp;quot;Blink&amp;quot; - Encender y apagar un LED&lt;/h2&gt;
+"/><meta property="og:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/arduino_docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/atom.xml" title="Arduino Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/feed.xml" title="Arduino Docs Blog RSS Feed"/><link rel="stylesheet" href="/arduino_docs/css/main.css"/><script src="/arduino_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/arduino_docs/"><img class="logo" src="/arduino_docs/img/favicon.png" alt="Arduino Docs"/><h2 class="headerTitleWithLogo">Arduino Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/arduino_docs/docs/home" target="_self">Docs</a></li><li class=""><a href="/arduino_docs/help" target="_self">Help</a></li><li class=""><a href="/arduino_docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Español</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">English</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/en/0_getting-started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Español</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/0_inicio">Introducción</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/arduino_docs/docs/es/1_ejercicio_uno">Ejercicio 1: &quot;Blink&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/2_ejercicio_dos">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Home</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/home">home</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Ejercicio 1: &quot;Blink&quot;</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="ejercicio-1-blink-encender-y-apagar-un-led"></a><a href="#ejercicio-1-blink-encender-y-apagar-un-led" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejercicio 1: &quot;Blink&quot; - Encender y apagar un LED</h2>
+<h3><a class="anchor" aria-hidden="true" id="objetivo-general"></a><a href="#objetivo-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
+<ul>
+<li>Encender y apagar un LED con Arduino UNO R3</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="materiales"></a><a href="#materiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales</h3>
+<ul>
+<li>Placa Arduino Uno-R3</li>
+<li>Un cable USB tipo A/B de impresora</li>
+<li>Una computadora</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="codigo"></a><a href="#codigo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Código</h3>
+<pre><code class="hljs"><span class="hljs-comment">/*
+  Blink
+  Enciende un LED por un segundo y luego lo apaga por un segundo, repetidamente.
+  Este código de ejemplo lo puedes encontrar en /Ejemplos/Basics/Blink en el IDE
+ */</span>
+
+<span class="hljs-comment">// El PIN 13 tiene un led conectado en la mayoría de las tarjetas arduino</span>
+
+<span class="hljs-keyword">int</span> led = <span class="hljs-number">13</span>; <span class="hljs-comment">// Se declara la variable led como tipo de dato entero</span>
+
+<span class="hljs-comment">// La rutina setup() se ejecuta al inicio y cuando presionas el botón reset</span>
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">pinMode</span>(led, <span class="hljs-literal">OUTPUT</span>);  <span class="hljs-comment">//Inicializa el pin numero 13 (valor de variable led) como salida.</span>
+                         <span class="hljs-comment">//(todas las salidas son digitales)</span>
+}
+<span class="hljs-comment">// La rutina loop() se ejecuta una y otra vez por siempre.</span>
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  <span class="hljs-built_in">digitalWrite</span>(led, <span class="hljs-literal">HIGH</span>);   <span class="hljs-comment">// Enciende el LED (HIGH el 1 binario o 5[V])</span>
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);               <span class="hljs-comment">// Espera un segundo</span>
+  <span class="hljs-built_in">digitalWrite</span>(led, <span class="hljs-literal">LOW</span>);    <span class="hljs-comment">// Apaga el LED dejando voltaje 0[V] en la salida</span>
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);               <span class="hljs-comment">// Espera por un segundo</span>
+}
+</code></pre>
+<p>Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.
+Puedes cambiar la frecuencia de parpadeo cambiando el número en la función siguiente, por el número que desees.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-number">1000</span>)</span></span>
+</code></pre>
+<p>Cabe señalar que con un retardo menor a 5[ms] el ojo humano no alcanza a percibir el parpadeo y se ve como si estuviera siempre prendido. Esta característica es muy usada para ahorrar energía ya que es mejor tener el LED apagado la mitad del tiempo, que siempre encendido.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/0_inicio"><span class="arrow-prev">← </span><span>Introducción</span></a><a class="docs-next button" href="/arduino_docs/docs/es/2_ejercicio_dos"><span>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-1-blink-encender-y-apagar-un-led">Ejercicio 1: &quot;Blink&quot; - Encender y apagar un LED</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#codigo">Código</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>

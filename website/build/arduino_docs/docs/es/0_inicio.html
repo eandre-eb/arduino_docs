@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introducción · Arduino Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;img src=&quot;https://lh3.google.com/u/0/d/1E4O6xWwP_VwZZFKm93ebfoJxhuZV-odG=w2880-h1576-iv1&quot; width=&quot;200&quot;&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Introducción · Arduino Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cristianemoyano.github.io/arduino_docs/"/><meta property="og:description" content="&lt;p&gt;&lt;img src=&quot;https://lh3.google.com/u/0/d/1E4O6xWwP_VwZZFKm93ebfoJxhuZV-odG=w2880-h1576-iv1&quot; width=&quot;200&quot;&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/arduino_docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/atom.xml" title="Arduino Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/feed.xml" title="Arduino Docs Blog RSS Feed"/><link rel="stylesheet" href="/arduino_docs/css/main.css"/><script src="/arduino_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/arduino_docs/"><img class="logo" src="/arduino_docs/img/favicon.png" alt="Arduino Docs"/><h2 class="headerTitleWithLogo">Arduino Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/arduino_docs/docs/home" target="_self">Docs</a></li><li class=""><a href="/arduino_docs/help" target="_self">Help</a></li><li class=""><a href="/arduino_docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Español</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">English</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/en/0_getting-started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Español</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/arduino_docs/docs/es/0_inicio">Introducción</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/1_ejercicio_uno">Ejercicio 1: &quot;Blink&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/2_ejercicio_dos">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Home</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/home">home</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Introducción</h1></header><article><div><span><p><img src="https://lh3.google.com/u/0/d/1E4O6xWwP_VwZZFKm93ebfoJxhuZV-odG=w2880-h1576-iv1" width="200"></p>
+<h2><a class="anchor" aria-hidden="true" id="que-es-arduino"></a><a href="#que-es-arduino" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es Arduino?</h2>
+<p><img align="left" src="https://lh3.google.com/u/0/d/1exrxWJ3innnIqfjBiiUGK6AOqm0fazro=w2880-h1480-iv1" width="300"></p>
+<p><strong>Arduino</strong> es una plataforma electrónica de código abierto basada en hardware y software fáciles de usar. El propósito de Arduino es el de poder ser usado por la mayoría de las personas, incluso sin tener un fuerte entrenamiento en programación y/o electrónica. Las placas Arduino poseen entradas donde podés conectar sensores, botones, teclados, etc. y convertirlas en una salida para activar un motor, encender un LED o publicar algo en internet. Puedes decirle a tu Arduino qué debe hacer enviando un conjunto de instrucciones a su microcontrolador. Para hacerlo, utiliza el lenguaje de programación <a href="https://www.arduino.cc/reference/en/">Arduino</a> (basado en <a href="http://wiring.org.co/">Wiring</a>) y el software Arduino (IDE) basado en <a href="https://processing.org/">Processing</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="por-que-arduino"></a><a href="#por-que-arduino" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Por qué Arduino?</h2>
+<p>Gracias a que posee una experiencia de usuario simple y accesible, Arduino se ha utilizado en miles de proyectos y aplicaciones diferentes. El software Arduino es fácil de usar para principiantes, pero lo suficientemente flexible para usuarios avanzados. Se ejecuta en Mac, Windows y Linux. Arduino es una herramienta clave para aprender cosas nuevas. Cualquier persona (niños, aficionados, artistas, programadores) puede comenzar a hacer modificaciones siguiendo las instrucciones paso a paso de un kit.</p>
+<h2><a class="anchor" aria-hidden="true" id="historia"></a><a href="#historia" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Historia</h2>
+<p>La historía de Arduino comenzó como un proyecto de tesis de maestría  de Hernando Barragán y sus asesores Massio Banzi y Casey Reas. Su objetivo principal fue el crear una herramienta que fuera fácil de usar. <a href="https://arduinohistory.github.io/">Leer más</a></p>
+<h2><a class="anchor" aria-hidden="true" id="tipos-de-arduino"></a><a href="#tipos-de-arduino" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tipos de Arduino</h2>
+<p>Existen muchos y muy distintos tipos de Arduino. Primero podríamos comenzar a diferenciarlos por su origen, es decir, existen Arduinos originales y arduinos genéricos. La diferencia entre un Arduino original y uno geneŕico es el lugar de su ensamble y la empresa que lo realiza. Tambien podemos distinguir distintos tipos de Arduino de acuerdo al procesador y cantidad de pines que tienen sus tarjetas. A continuación se muestran una comparativa entre los 4 principales Arduinos originales:</p>
+<p><img src="https://lh3.google.com/u/0/d/1tC-2MpJAZkTTpIGSxaS4MDH5nNTOuH9L=w1718-h1576-iv1" width="700"></p>
+<h2><a class="anchor" aria-hidden="true" id="que-es-el-arduino-uno"></a><a href="#que-es-el-arduino-uno" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es el Arduino UNO?</h2>
+<p>El UNO fue la primera versión de la placa Arduino. Esta fue la placa que se popularizo e hizo famosa a la marca. Esta placa incluía sólo un puerto serial RS232 y las mismas señales de entrada/salidas de un Arduino moderno. La evolución de esta placa fue el Arduino UNO R3, la cual ya cuenta con un puerto de comunicación USB que hace la conversión de USB a Serial TTL, así como componentes de montaje superficial.</p>
+<h2><a class="anchor" aria-hidden="true" id="descripcion-y-caracteristicas-tecnicas-del-arduino-uno-r3"></a><a href="#descripcion-y-caracteristicas-tecnicas-del-arduino-uno-r3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción y características técnicas del Arduino UNO R3</h2>
+<p>Vamos a ver las diferentes partes y características que tiene la placa electrónica Arduino Uno R3:</p>
+<p><strong>Características técnicas</strong>:</p>
+<ul>
+<li>Microcontrolador: ATmega328P</li>
+<li>Tensión de funcionamiento: 5V</li>
+<li>Voltaje de entrada (recomendado): 7-12V</li>
+<li>Voltaje de entrada (límite): 6-20V</li>
+<li>Digital pines I/O: 4 (de los cuales 6 proporcionan una salida PWM)</li>
+<li>PWM digital pines I/O: 6</li>
+<li>Pines de entrada analógica: 6</li>
+<li>Corriente DC por Pin I/O: 20mA</li>
+<li>Corriente DC para Pin 3.3V: 60mA</li>
+<li>Memoria flash: 32KB ATmega328P de los que 0,5 KB son utilizados por el gestor de arranque.</li>
+<li>SRAM: 2KB ATmega328P</li>
+<li>EEPROM: 1KB ATmega328P</li>
+<li>Velocidad de reloj: 16 MHz</li>
+<li>Longitud: 68,6 mm</li>
+<li>Anchura: 53,4 mm</li>
+<li>Peso: 25 g</li>
+</ul>
+<p>La placa electrónica Arduino Uno R3 puede ser alimentada de varias formas, con un cable USB conectado al ordenador o con una fuente externa.</p>
+<p>Arduino cuenta con un zócalo donde se conecta un Jack de 2,1mm para conectar un adaptador que se encuentre entre los rangos de 7 – 12v que es la tensión recomendada.</p>
+<p>La placa cuenta con un conector USB tipo-B para conectarlo al ordenador con el cual podemos programarlo y a su vez alimentarlo.</p>
+<p><img src="https://lh3.google.com/u/0/d/1j7N8KMtNKGnd6QBUFvIb59u3ghlNiiC7=w2880-h1480-iv1" width="700"></p>
+<p><img src="https://lh3.google.com/u/0/d/1Yo-fmWixUzMBDk_67Kvcn_KLw-__dd0r=w2880-h1480-iv1" width="700">
+<em>Descripción de los pines de Arduino Uno.</em></p>
+<p><a href="https://www.infootec.net/arduino/">Leer más</a></p>
+<h2><a class="anchor" aria-hidden="true" id="descargar-ide"></a><a href="#descargar-ide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descargar IDE</h2>
+<p><a href="https://www.arduino.cc/en/main/software">Ir a la página oficial</a></p>
+<h2><a class="anchor" aria-hidden="true" id="enlaces-y-fuente"></a><a href="#enlaces-y-fuente" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enlaces y Fuente</h2>
+<ul>
+<li><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Wiring">https://es.wikipedia.org/wiki/Wiring</a></li>
+<li><a href="https://www.infootec.net/arduino/">https://www.infootec.net/arduino/</a></li>
+<li><a href="https://hetpro-store.com/TUTORIALES/que-es-arduino/">https://hetpro-store.com/TUTORIALES/que-es-arduino/</a></li>
+<li><a href="https://create.arduino.cc/projecthub">https://create.arduino.cc/projecthub</a></li>
+<li><a href="https://www.tinkercad.com/dashboard">https://www.tinkercad.com/dashboard</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/en/0_getting-started"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/arduino_docs/docs/es/1_ejercicio_uno"><span>Ejercicio 1: &quot;Blink&quot;</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#que-es-arduino">¿Qué es Arduino?</a></li><li><a href="#por-que-arduino">¿Por qué Arduino?</a></li><li><a href="#historia">Historia</a></li><li><a href="#tipos-de-arduino">Tipos de Arduino</a></li><li><a href="#que-es-el-arduino-uno">¿Qué es el Arduino UNO?</a></li><li><a href="#descripcion-y-caracteristicas-tecnicas-del-arduino-uno-r3">Descripción y características técnicas del Arduino UNO R3</a></li><li><a href="#descargar-ide">Descargar IDE</a></li><li><a href="#enlaces-y-fuente">Enlaces y Fuente</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
