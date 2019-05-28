@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; · Arduino Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 2: &amp;quot;Ultrasonic Distance Sensor&amp;quot; - Sensor ultrasónico de distancia&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; · Arduino Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cristianemoyano.github.io/arduino_docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 2: &amp;quot;Ultrasonic Distance Sensor&amp;quot; - Sensor ultrasónico de distancia&lt;/h2&gt;
+"/><meta property="og:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/arduino_docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/atom.xml" title="Arduino Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/feed.xml" title="Arduino Docs Blog RSS Feed"/><link rel="stylesheet" href="/arduino_docs/css/main.css"/><script src="/arduino_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/arduino_docs/"><img class="logo" src="/arduino_docs/img/favicon.png" alt="Arduino Docs"/><h2 class="headerTitleWithLogo">Arduino Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/arduino_docs/docs/home" target="_self">Docs</a></li><li class=""><a href="/arduino_docs/help" target="_self">Help</a></li><li class=""><a href="/arduino_docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Español</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">English</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/en/getting-started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Español</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/0_inicio">Introducción</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/1_ejercicio_uno">Ejercicio 1: &quot;Blink&quot;</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/arduino_docs/docs/es/2_ejercicio_dos">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Home</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/home">home</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia"></a><a href="#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; - Sensor ultrasónico de distancia</h2>
+<h3><a class="anchor" aria-hidden="true" id="objetivo-general"></a><a href="#objetivo-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
+<ul>
+<li>En éste ejercicio vamos a aprender a utilzar el sensor ultrasónico HC-SR04 y como usarlo con un Buzzer y un LED.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="materiales"></a><a href="#materiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales</h3>
+<ul>
+<li>Placa Arduino Uno-R3</li>
+<li>Un cable USB tipo A/B de impresora</li>
+<li>Una computadora</li>
+<li>Sensor ultrasónico HC-SR04</li>
+<li>Breadboard/Protoboard</li>
+<li>Jumper Wires</li>
+<li>Buzzer</li>
+<li>LED</li>
+<li>Resistencia de 220 Ohm</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="codigo"></a><a href="#codigo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Código</h3>
+<pre><code class="hljs"><span class="hljs-comment">// defines pins numbers</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> trigPin = <span class="hljs-number">9</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> echoPin = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> buzzer = <span class="hljs-number">11</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> ledPin = <span class="hljs-number">13</span>;
+
+<span class="hljs-comment">// defines variables</span>
+<span class="hljs-keyword">long</span> duration;
+<span class="hljs-keyword">int</span> distance;
+<span class="hljs-keyword">int</span> safetyDistance;
+
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+<span class="hljs-built_in">pinMode</span>(trigPin, <span class="hljs-literal">OUTPUT</span>); <span class="hljs-comment">// Sets the trigPin as an Output</span>
+<span class="hljs-built_in">pinMode</span>(echoPin, <span class="hljs-literal">INPUT</span>); <span class="hljs-comment">// Sets the echoPin as an Input</span>
+<span class="hljs-built_in">pinMode</span>(buzzer, <span class="hljs-literal">OUTPUT</span>);
+<span class="hljs-built_in">pinMode</span>(ledPin, <span class="hljs-literal">OUTPUT</span>);
+<span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>); <span class="hljs-comment">// Starts the serial communication</span>
+}
+
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+<span class="hljs-comment">// Clears the trigPin</span>
+<span class="hljs-built_in">digitalWrite</span>(trigPin, <span class="hljs-literal">LOW</span>);
+<span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// Sets the trigPin on HIGH state for 10 micro seconds</span>
+<span class="hljs-built_in">digitalWrite</span>(trigPin, <span class="hljs-literal">HIGH</span>);
+<span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+<span class="hljs-built_in">digitalWrite</span>(trigPin, <span class="hljs-literal">LOW</span>);
+
+<span class="hljs-comment">// Reads the echoPin, returns the sound wave travel time in microseconds</span>
+duration = <span class="hljs-built_in">pulseIn</span>(echoPin, <span class="hljs-literal">HIGH</span>);
+
+<span class="hljs-comment">// Calculating the distance</span>
+distance= duration*<span class="hljs-number">0.034</span>/<span class="hljs-number">2</span>;
+
+safetyDistance = distance;
+<span class="hljs-built_in">if</span> (safetyDistance &lt;= <span class="hljs-number">5</span>){
+  <span class="hljs-built_in">digitalWrite</span>(buzzer, <span class="hljs-literal">HIGH</span>);
+  <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">HIGH</span>);
+}
+<span class="hljs-built_in">else</span>{
+  <span class="hljs-built_in">digitalWrite</span>(buzzer, <span class="hljs-literal">LOW</span>);
+  <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">LOW</span>);
+}
+
+<span class="hljs-comment">// Prints the distance on the Serial Monitor</span>
+<span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Distance: "</span>);
+<span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(distance);
+}
+</code></pre>
+<p>Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.</p>
+<p>Conexiones:</p>
+<p>El módulo ultrasónico HC-SR04 tiene 4 pins, Ground, VCC, Trig and Echo. El pint Ground y VCC necesitan ser conectados al pin de Ground y de 5 volts de la placa Arduino respectivamente y los pins trig y echo a cualquier pin Digital I/O de la placa Arduino.</p>
+<ul>
+<li>Sensor HC-SR04 conectarlo a la Breadboard</li>
+<li>Pin VCC del sensor conectarlo al pin +5V del Arduino</li>
+<li>Pin GND del sensor conectarlo al pin GND del Arduino</li>
+<li>Pin Trig del sensor conectarlo al pin Digital I/O #9 del Arduino</li>
+<li>Pin Echo del sensor conectarlo al pin Digital I/O #10 del Arduino</li>
+</ul>
+<p><strong>Buzzer y LED</strong></p>
+<ul>
+<li>Conectar el Buzzer a la Breadboard</li>
+<li>La pata larga (+) del Buzzer long leg  conectarla al pin Digital I/O #11 del Arduino</li>
+<li>La pata corta (-) del Buzzer conectarla al pin GND del Arduino</li>
+<li>Conectar el LED a la Breadboard</li>
+<li>Conectar la Resistencia a la pata larga (+) del LED</li>
+<li>Conectar la otra pata de la resistencia (de la pata larga del LED) al pin Digital #13 del Arduino</li>
+<li>A la pata corta (-) del LED conectarla al pin GND del Arduino</li>
+</ul>
+<p>Esquemático:</p>
+<p><img src="https://lh3.google.com/u/0/d/1WklsRgIqXQrclYSXZOLPwCSz_VxoqboX=w1710-h1546-iv1" width="700"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/1_ejercicio_uno"><span class="arrow-prev">← </span><span>Ejercicio 1: &quot;Blink&quot;</span></a><a class="docs-next button" href="/arduino_docs/docs/home"><span>home</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; - Sensor ultrasónico de distancia</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#codigo">Código</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/arduino_docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/arduino_docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/arduino_docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
