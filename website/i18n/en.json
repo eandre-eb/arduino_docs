@@ -3,9 +3,9 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Un sitio web para aprender sobre la placa Arduino UNO R3",
+    "tagline": "Proyectos Arduino para ponerte a prueba",
     "docs": {
-      "en/getting-started": {
+      "en/0_getting-started": {
         "title": "Getting Started"
       },
       "es/0_inicio": {

@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Arduino Docs', // Title for your website.
-  tagline: 'Un sitio web para aprender sobre la placa Arduino UNO R3',
+  tagline: 'Proyectos Arduino para ponerte a prueba',
   url: 'https://cristianemoyano.github.io', // Your website URL
   baseUrl: '/arduino_docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
