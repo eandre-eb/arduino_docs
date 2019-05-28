@@ -1,5 +1,5 @@
 ---
-id: ejercicio_uno
+id: 1_ejercicio_uno
 title: Ejercicio 1: "Blink"
 ---
 

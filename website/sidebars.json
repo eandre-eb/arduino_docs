@@ -4,8 +4,9 @@
       "en/getting-started"
     ],
     "Español": [
-      "es/inicio",
-      "es/ejercicio_uno"
+      "es/0_inicio",
+      "es/1_ejercicio_uno",
+      "es/2_ejercicio_dos"
     ],
     "Home": [
       "home"

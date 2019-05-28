@@ -8,11 +8,14 @@
       "en/getting-started": {
         "title": "Getting Started"
       },
-      "es/ejercicio_uno": {
+      "es/0_inicio": {
+        "title": "Introducción"
+      },
+      "es/1_ejercicio_uno": {
         "title": "Ejercicio 1: \"Blink\""
       },
-      "es/inicio": {
-        "title": "Introducción"
+      "es/2_ejercicio_dos": {
+        "title": "Ejercicio 2: \"Using Ultrasonic Distance Sensor\""
       },
       "home": {
         "title": "Home",

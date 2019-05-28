@@ -1,5 +1,5 @@
 ---
-id: inicio
+id: 0_inicio
 title: Introducción
 ---
 
@@ -7,7 +7,7 @@ title: Introducción
 
 ## ¿Qué es Arduino?
 
-<img align="left" src="https://lh6.googleusercontent.com/pjWb-_chcXmaYf7QWxDEk96-mb59vwd_0yMkFJiwGOj7uShuI_8kmQlp3NaYijAIj6iUT3Dd2RTMYO9ib11W=w2880-h1576-rw" width="300">
+<img align="left" src="https://lh3.google.com/u/0/d/1exrxWJ3innnIqfjBiiUGK6AOqm0fazro=w2880-h1480-iv1" width="300">
 
 **Arduino** es una plataforma electrónica de código abierto basada en hardware y software fáciles de usar. El propósito de Arduino es el de poder ser usado por la mayoría de las personas, incluso sin tener un fuerte entrenamiento en programación y/o electrónica. Las placas Arduino poseen entradas donde podés conectar sensores, botones, teclados, etc. y convertirlas en una salida para activar un motor, encender un LED o publicar algo en internet. Puedes decirle a tu Arduino qué debe hacer enviando un conjunto de instrucciones a su microcontrolador. Para hacerlo, utiliza el lenguaje de programación [Arduino](https://www.arduino.cc/reference/en/) (basado en [Wiring](http://wiring.org.co/)) y el software Arduino (IDE) basado en [Processing](https://processing.org/).
 
@@ -61,10 +61,10 @@ Arduino cuenta con un zócalo donde se conecta un Jack de 2,1mm para conectar un
 
 La placa cuenta con un conector USB tipo-B para conectarlo al ordenador con el cual podemos programarlo y a su vez alimentarlo.
 
-<img src="https://lh3.google.com/u/0/d/1Yo-fmWixUzMBDk_67Kvcn_KLw-__dd0r=w2880-h1576-iv1" width="700">
+<img src="https://lh3.google.com/u/0/d/1j7N8KMtNKGnd6QBUFvIb59u3ghlNiiC7=w2880-h1480-iv1" width="700">
 
 
-<img src="https://lh3.google.com/u/0/d/1j7N8KMtNKGnd6QBUFvIb59u3ghlNiiC7=w2880-h1576-iv1" width="700">
+<img src="https://lh3.google.com/u/0/d/1Yo-fmWixUzMBDk_67Kvcn_KLw-__dd0r=w2880-h1480-iv1" width="700">
 *Descripción de los pines de Arduino Uno.*
 
 [Leer más](https://www.infootec.net/arduino/)
@@ -80,3 +80,5 @@ La placa cuenta con un conector USB tipo-B para conectarlo al ordenador con el c
 * https://es.wikipedia.org/wiki/Wiring
 * https://www.infootec.net/arduino/
 * https://hetpro-store.com/TUTORIALES/que-es-arduino/
+* https://create.arduino.cc/projecthub
+* https://www.tinkercad.com/dashboard
