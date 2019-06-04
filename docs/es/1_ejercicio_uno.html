@@ -122,93 +122,81 @@ Puedes cambiar la frecuencia de parpadeo cambiando el número en la función sig
 <p><img src="https://felixmaocho.files.wordpress.com/2013/01/pulsador-esuema1.jpg" width="150" align="left">
 <img src="https://static.wixstatic.com/media/18cfef_9300efc452b74f3681dae20fd76333ea~mv2.jpg/v1/fill/w_250,h_250,al_c,q_90/file.jpg" width="150"></p>
 <pre><code class="hljs"><span class="hljs-comment">//set pin numbers</span>
-<span class="hljs-keyword">const</span> int ledPin = 2;         <span class="hljs-comment">//const won't change</span>
-<span class="hljs-keyword">const</span> int buttonPin = 4;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> ledPin = <span class="hljs-number">2</span>;         <span class="hljs-comment">//const won't change</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> buttonPin = <span class="hljs-number">4</span>;
 
 <span class="hljs-comment">//variables will change</span>
-int buttonState = 0;          <span class="hljs-comment">//variables for reading the pushbutton status</span>
+<span class="hljs-keyword">int</span> buttonState = <span class="hljs-number">0</span>;          <span class="hljs-comment">//variables for reading the pushbutton status</span>
 
-void setup() {
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
 
-  Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);    <span class="hljs-comment">//initialize the LED pin as an output</span>
-  pinMode(buttonPin, <span class="hljs-keyword">INPUT</span>);  <span class="hljs-comment">//initialize the pushbutton pin as an output</span>
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+  <span class="hljs-built_in">pinMode</span>(ledPin, <span class="hljs-literal">OUTPUT</span>);    <span class="hljs-comment">//initialize the LED pin as an output</span>
+  <span class="hljs-built_in">pinMode</span>(buttonPin, <span class="hljs-literal">INPUT</span>);  <span class="hljs-comment">//initialize the pushbutton pin as an output</span>
 }
 
-void loop() {
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
 
-  buttonState = digitalRead(buttonPin); <span class="hljs-comment">//read the state of the pushbutton value</span>
+  buttonState = <span class="hljs-built_in">digitalRead</span>(buttonPin); <span class="hljs-comment">//read the state of the pushbutton value</span>
 
-  <span class="hljs-keyword">if</span> (buttonState == HIGH) {            <span class="hljs-comment">//check if the pushbutton is pressed</span>
+  <span class="hljs-built_in">if</span> (buttonState == <span class="hljs-literal">HIGH</span>) {            <span class="hljs-comment">//check if the pushbutton is pressed</span>
     <span class="hljs-comment">//if it is, the buttonState is HIGH</span>
-    digitalWrite(ledPin, HIGH);         <span class="hljs-comment">//turn LED on</span>
-    Serial.println(<span class="hljs-string">"LED ON +++++++"</span>);
+    <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">HIGH</span>);         <span class="hljs-comment">//turn LED on</span>
+    <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"LED ON +++++++"</span>);
   }
-  <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">else</span> {
 
-    digitalWrite(ledPin, LOW);          <span class="hljs-comment">// turn LED off</span>
-    Serial.println(<span class="hljs-string">"LED OFF -------"</span>);
+    <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">LOW</span>);          <span class="hljs-comment">// turn LED off</span>
+    <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"LED OFF -------"</span>);
   }
 
 }
-``
-
-## Anexos
-
-### ¿<span class="hljs-keyword">Qu</span>é es un LED?
-
-&lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/commons/c/c0/LED%2C_5mm%2C_green_%28en%29.png"</span> width=<span class="hljs-string">"400"</span> align=<span class="hljs-string">"left"</span>&gt;
-
-Un LED , es un dispositivo diodo emisor <span class="hljs-keyword">de</span> luz <span class="hljs-keyword">que</span> <span class="hljs-keyword">se</span> usan como indicadores <span class="hljs-keyword">en</span> muchos dispositivos y <span class="hljs-keyword">en</span> iluminació<span class="hljs-keyword">n</span>. Los primeros LEDs emití<span class="hljs-keyword">an</span> luz roja <span class="hljs-keyword">de</span> baja intensidad, pero los dispositivos actuales emiten luz <span class="hljs-keyword">de</span> alto brillo <span class="hljs-keyword">en</span> el espectro infrarrojo, visible y ultravioleta. Un LED comienza a funcionar aproximadamente con 2 voltios.
-
-#### ¿Cómo determino <span class="hljs-keyword">la</span> polaridad <span class="hljs-keyword">de</span> un LED?
-
-Existen tres formas principales <span class="hljs-keyword">de</span> conocer <span class="hljs-keyword">la</span> polaridad <span class="hljs-keyword">de</span> un led:
-
-<span class="hljs-comment">* La pata más larga siempre va a ser el ánodo.</span>
-<span class="hljs-comment">* En el lado del cátodo, la base del LED tiene un borde plano.</span>
-<span class="hljs-comment">* Dentro del LED la plaqueta indica el ánodo. Se puede reconocer porque es más pequeña que el yunque que indica el cátodo.</span>
-
-### ¿<span class="hljs-keyword">Qu</span>é es una Protoboard/Breadboard?
-
-&lt;img src=<span class="hljs-string">"https://http2.mlstatic.com/protoboard-830-puntos-placa-experimental-arduino-electronica-D_NQ_NP_844461-MLA30225042449_052019-Q.jpg"</span> width=<span class="hljs-string">"400"</span>&gt;
-(Protoboard solderless <span class="hljs-keyword">de</span> 830 puntos con doble banda <span class="hljs-keyword">de</span> alimentació<span class="hljs-keyword">n</span> <span class="hljs-keyword">en</span> ambos lados.)
-
-&lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Pcb33.430-g1.jpg/400px-Pcb33.430-g1.jpg"</span> width=<span class="hljs-string">"350"</span>&gt;
-(Protoboard <span class="hljs-keyword">de</span> 400 puntos)
-
-Es un tablero con orificios conectados eléctricamente entre sí, habitualmente siguiendo patrones <span class="hljs-keyword">de</span> <span class="hljs-keyword">l</span>íneas, <span class="hljs-keyword">en</span> el cual <span class="hljs-keyword">se</span> pueden insertar componentes electrónicos y cables para el armado <span class="hljs-keyword">de</span> prototipos <span class="hljs-keyword">de</span> circuitos electrónicos y sistemas similares. <span class="hljs-keyword">Est</span>á hecho <span class="hljs-keyword">de</span> dos materiales, un aislante, generalmente un <span class="hljs-keyword">pl</span>ástico, y un conductor <span class="hljs-keyword">que</span> conecta los diversos orificios entre sí. Uno <span class="hljs-keyword">de</span> sus usos principales es <span class="hljs-keyword">la</span> creació<span class="hljs-keyword">n</span> y comprobació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> prototipos <span class="hljs-keyword">de</span> circuitos electrónicos antes <span class="hljs-keyword">de</span> llegar a <span class="hljs-keyword">la</span> impresió<span class="hljs-keyword">n</span> mecánica del circuito <span class="hljs-keyword">en</span> sistemas <span class="hljs-keyword">de</span> producció<span class="hljs-keyword">n</span> comercial.
-
-[Wiki](https:<span class="hljs-comment">//en.wikipedia.org/wiki/Breadboard)</span>
-
-### ¿<span class="hljs-keyword">Qu</span>é es una resistencia/resistor?
-
-&lt;img src=<span class="hljs-string">"http://telesaonline.com/49228-large_default/resistencia-carbon-1-4w-20k-ohms.jpg"</span> width=<span class="hljs-string">"300"</span> align=<span class="hljs-string">"left"</span>&gt;
-
-<span class="hljs-keyword">La</span> resistencia o resistor, es cualquier elemento localizado <span class="hljs-keyword">en</span> el paso <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> corriente eléctrica y <span class="hljs-keyword">que</span> causa oposició<span class="hljs-keyword">n</span> a <span class="hljs-keyword">que</span> esta fluya. Las resistencias <span class="hljs-keyword">se</span> representan con <span class="hljs-keyword">la</span> letra R y <span class="hljs-keyword">se</span> miden <span class="hljs-keyword">en</span> Ohm (Ω). Para obtener el valor <span class="hljs-keyword">de</span> una resistencia, <span class="hljs-keyword">se</span> puede emplear:
-
-<span class="hljs-comment">* [Una tabla](https://www.inventable.eu/media/122_Resistencias_colores/resistor_color_4band.png) o [una calculadora online](https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-resistor-color-code-5-band)</span>
-<span class="hljs-comment">* Un multímetro</span>
-
-<span class="hljs-keyword">En</span> las resistencias existen 3 características fundamentales:
-
-- el valor <span class="hljs-keyword">de</span> resistencia ([Ohm] R = V/I)
-- <span class="hljs-keyword">la</span> potencia ([Watt] P = V.I)
-- <span class="hljs-keyword">la</span> tolerancia (%)
-
-A excepció<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> potencia <span class="hljs-keyword">que</span> depende <span class="hljs-keyword">de</span> las dimensiones <span class="hljs-keyword">de</span> las resistencias, el valor <span class="hljs-keyword">de</span> resistencia y <span class="hljs-keyword">la</span> tolerancia son indicados con bandas <span class="hljs-keyword">de</span> color. Existen dos tipo <span class="hljs-keyword">de</span> codificació<span class="hljs-keyword">n</span> para las resistencias con bandas <span class="hljs-keyword">de</span> color: <span class="hljs-keyword">la</span> <span class="hljs-keyword">de</span> 4 bandas o <span class="hljs-keyword">la</span> <span class="hljs-keyword">de</span> 5 bandas para las resistencias <span class="hljs-keyword">de</span> precisió<span class="hljs-keyword">n</span>. <span class="hljs-keyword">En</span> ambos sistemas, <span class="hljs-keyword">la</span> última banda indica <span class="hljs-keyword">la</span> **tolerancia**, es decir cual es <span class="hljs-keyword">la</span> variació<span class="hljs-keyword">n</span> <span class="hljs-keyword">que</span> el valor real <span class="hljs-keyword">de</span> resistencia puede diferir respecto al indicado <span class="hljs-keyword">en</span> el cuerpo. <span class="hljs-keyword">En</span> <span class="hljs-keyword">la</span> codificació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> 4 bandas, si falta <span class="hljs-keyword">la</span> banda <span class="hljs-keyword">de</span> tolerancia quiere decir <span class="hljs-keyword">que</span> <span class="hljs-keyword">la</span> tolerancia es <span class="hljs-keyword">de</span> +/- el 20% y por lo tanto veremos solo 3 bandas.
-
-<span class="hljs-keyword">La</span> potencia <span class="hljs-keyword">de</span> una resistencia determina <span class="hljs-keyword">la</span> cantidad <span class="hljs-keyword">de</span> Watts <span class="hljs-keyword">que</span> soporta. <span class="hljs-keyword">Se</span> puede calcular mediante <span class="hljs-keyword">la</span> siguiente fórmula:
 </code></pre>
-<p>P = V . I</p>
-<p>// Ejemplo: En un circuito donde circula una corriente de 20mA
-// con una fuente de alimentación de 5v la potencia es de:</p>
-<p>P = V.I = 5 x 0.02 = 0.1 W</p>
-<p>// Por lo tanto la resistencia que debo elegir es de al menos de 1/8 W = 0.125 W
-// Menos potencia podría causar que se queme la resistencia y mayor potencia estaría demás.</p>
-<pre><code class="hljs">
-## Enlaces
+<h2><a class="anchor" aria-hidden="true" id="anexos"></a><a href="#anexos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anexos</h2>
+<h3><a class="anchor" aria-hidden="true" id="que-es-un-led"></a><a href="#que-es-un-led" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un LED?</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/LED%2C_5mm%2C_green_%28en%29.png" width="400" align="left"></p>
+<p>Un LED , es un dispositivo diodo emisor de luz que se usan como indicadores en muchos dispositivos y en iluminación. Los primeros LEDs emitían luz roja de baja intensidad, pero los dispositivos actuales emiten luz de alto brillo en el espectro infrarrojo, visible y ultravioleta. Un LED comienza a funcionar aproximadamente con 2 voltios.</p>
+<h4><a class="anchor" aria-hidden="true" id="como-determino-la-polaridad-de-un-led"></a><a href="#como-determino-la-polaridad-de-un-led" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Cómo determino la polaridad de un LED?</h4>
+<p>Existen tres formas principales de conocer la polaridad de un led:</p>
+<ul>
+<li>La pata más larga siempre va a ser el ánodo.</li>
+<li>En el lado del cátodo, la base del LED tiene un borde plano.</li>
+<li>Dentro del LED la plaqueta indica el ánodo. Se puede reconocer porque es más pequeña que el yunque que indica el cátodo.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="que-es-una-protoboard-breadboard"></a><a href="#que-es-una-protoboard-breadboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es una Protoboard/Breadboard?</h3>
+<p><img src="https://http2.mlstatic.com/protoboard-830-puntos-placa-experimental-arduino-electronica-D_NQ_NP_844461-MLA30225042449_052019-Q.jpg" width="400">
+(Protoboard solderless de 830 puntos con doble banda de alimentación en ambos lados.)</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Pcb33.430-g1.jpg/400px-Pcb33.430-g1.jpg" width="350">
+(Protoboard de 400 puntos)</p>
+<p>Es un tablero con orificios conectados eléctricamente entre sí, habitualmente siguiendo patrones de líneas, en el cual se pueden insertar componentes electrónicos y cables para el armado de prototipos de circuitos electrónicos y sistemas similares. Está hecho de dos materiales, un aislante, generalmente un plástico, y un conductor que conecta los diversos orificios entre sí. Uno de sus usos principales es la creación y comprobación de prototipos de circuitos electrónicos antes de llegar a la impresión mecánica del circuito en sistemas de producción comercial.</p>
+<p><a href="https://en.wikipedia.org/wiki/Breadboard">Wiki</a></p>
+<h3><a class="anchor" aria-hidden="true" id="que-es-una-resistencia-resistor"></a><a href="#que-es-una-resistencia-resistor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es una resistencia/resistor?</h3>
+<p><img src="http://telesaonline.com/49228-large_default/resistencia-carbon-1-4w-20k-ohms.jpg" width="300" align="left"></p>
+<p>La resistencia o resistor, es cualquier elemento localizado en el paso de la corriente eléctrica y que causa oposición a que esta fluya. Las resistencias se representan con la letra R y se miden en Ohm (Ω). Para obtener el valor de una resistencia, se puede emplear:</p>
+<ul>
+<li><a href="https://www.inventable.eu/media/122_Resistencias_colores/resistor_color_4band.png">Una tabla</a> o <a href="https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-resistor-color-code-5-band">una calculadora online</a></li>
+<li>Un multímetro</li>
+</ul>
+<p>En las resistencias existen 3 características fundamentales:</p>
+<ul>
+<li>el valor de resistencia ([Ohm] R = V/I)</li>
+<li>la potencia ([Watt] P = V.I)</li>
+<li>la tolerancia (%)</li>
+</ul>
+<p>A excepción de la potencia que depende de las dimensiones de las resistencias, el valor de resistencia y la tolerancia son indicados con bandas de color. Existen dos tipo de codificación para las resistencias con bandas de color: la de 4 bandas o la de 5 bandas para las resistencias de precisión. En ambos sistemas, la última banda indica la <strong>tolerancia</strong>, es decir cual es la variación que el valor real de resistencia puede diferir respecto al indicado en el cuerpo. En la codificación de 4 bandas, si falta la banda de tolerancia quiere decir que la tolerancia es de +/- el 20% y por lo tanto veremos solo 3 bandas.</p>
+<p>La potencia de una resistencia determina la cantidad de Watts que soporta. Se puede calcular mediante la siguiente fórmula:</p>
+<pre><code class="hljs">P = V . I
 
-* https:<span class="hljs-comment">//www.tinkercad.com/</span>
+<span class="hljs-comment">// Ejemplo: En un circuito donde circula una corriente de 20mA</span>
+<span class="hljs-comment">// con una fuente de alimentación de 5v la potencia es de:</span>
+
+P = V.I = <span class="hljs-number">5</span> x <span class="hljs-number">0.02</span> = <span class="hljs-number">0.1</span> W
+
+<span class="hljs-comment">// Por lo tanto la resistencia que debo elegir es de al menos de 1/8 W = 0.125 W</span>
+<span class="hljs-comment">// Menos potencia podría causar que se queme la resistencia y mayor potencia estaría demás.</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/0_inicio"><span class="arrow-prev">← </span><span>Introducción</span></a><a class="docs-next button" href="/arduino_docs/docs/es/2_ejercicio_dos"><span>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-1-blink-encender-y-apagar-un-led">Ejercicio 1: &quot;Blink&quot; - Encender y apagar un LED</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#codigo">Código</a></li></ul></li><li><a href="#adicional">Adicional</a><ul class="toc-headings"><li><a href="#ejercicio-11-blink-encender-y-apagar-un-led-externo">Ejercicio 1.1: &quot;Blink+&quot; - Encender y apagar un LED externo</a></li><li><a href="#material-adicional">Material adicional</a></li><li><a href="#ejercicio-12-blink-encender-y-apagar-un-led-externo-con-un-pulsador">Ejercicio 1.2: &quot;Blink++&quot; - Encender y apagar un LED externo con un pulsador</a></li><li><a href="#material-adicional-1">Material adicional</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="enlaces"></a><a href="#enlaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enlaces</h2>
+<ul>
+<li><a href="https://www.tinkercad.com/">https://www.tinkercad.com/</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/0_inicio"><span class="arrow-prev">← </span><span>Introducción</span></a><a class="docs-next button" href="/arduino_docs/docs/es/2_ejercicio_dos"><span>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-1-blink-encender-y-apagar-un-led">Ejercicio 1: &quot;Blink&quot; - Encender y apagar un LED</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#codigo">Código</a></li></ul></li><li><a href="#adicional">Adicional</a><ul class="toc-headings"><li><a href="#ejercicio-11-blink-encender-y-apagar-un-led-externo">Ejercicio 1.1: &quot;Blink+&quot; - Encender y apagar un LED externo</a></li><li><a href="#material-adicional">Material adicional</a></li><li><a href="#ejercicio-12-blink-encender-y-apagar-un-led-externo-con-un-pulsador">Ejercicio 1.2: &quot;Blink++&quot; - Encender y apagar un LED externo con un pulsador</a></li><li><a href="#material-adicional-1">Material adicional</a></li></ul></li><li><a href="#anexos">Anexos</a><ul class="toc-headings"><li><a href="#que-es-un-led">¿Qué es un LED?</a></li><li><a href="#que-es-una-protoboard-breadboard">¿Qué es una Protoboard/Breadboard?</a></li><li><a href="#que-es-una-resistencia-resistor">¿Qué es una resistencia/resistor?</a></li></ul></li><li><a href="#enlaces">Enlaces</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
