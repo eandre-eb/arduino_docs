@@ -7,7 +7,7 @@ title: Ejercicio 2: "Ultrasonic Distance Sensor"
 
 ### Objetivo General
 
-- En éste ejercicio vamos a aprender a utilzar el sensor ultrasónico HC-SR04 y como usarlo con un Buzzer y un LED.
+- En éste ejercicio vamos a aprender a utilzar el sensor ultrasónico [HC-SR04](https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf)
 
 ### Materiales
 
@@ -17,9 +17,6 @@ title: Ejercicio 2: "Ultrasonic Distance Sensor"
 - Sensor ultrasónico HC-SR04
 - Breadboard/Protoboard
 - Jumper Wires
-- Buzzer
-- LED
-- Resistencia de 220 Ohm
 
 ### ¿Qué es un sensor de ultrasonido?
 
@@ -55,17 +52,142 @@ El motivo de divir por dos el tiempo (además de la velociad del sonido en las u
 <img src="https://www.luisllamas.es/wp-content/uploads/2015/06/sensor-ultrasonico-explicacion.png" width="400">
 
 
-### ¿Qué es un buzzer activo?
+### Esquema de Montaje
+
+<img src="https://www.luisllamas.es/wp-content/uploads/2015/06/arduino-ultrasonidos-montaje.png" width="500">
+
+**Conexiones**:
+
+El módulo ultrasónico HC-SR04 tiene 4 pins, Ground, VCC, Trig and Echo. El pint Ground y VCC necesitan ser conectados al pin de Ground y de 5 volts de la placa Arduino respectivamente y los pins trig y echo a cualquier pin Digital I/O de la placa Arduino.
+
+* Sensor HC-SR04 conectarlo a la Breadboard
+* Pin VCC del sensor conectarlo al pin +5V del Arduino
+* Pin GND del sensor conectarlo al pin GND del Arduino
+* Pin Trig del sensor conectarlo al pin Digital I/O #6 del Arduino
+* Pin Echo del sensor conectarlo al pin Digital I/O #5 del Arduino
+
+### Código
+
+#### Sin librerías
+
+Para activar el sensor necesitamos generar un pulso eléctrico en el pin Trigger (disparador) de al menos 10us. Previamente, pondremos el pin a Low durante 4us para asegurar un disparo limpio.
+
+Posteriormente usamos la función [pulseIn](https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/) para obtener el tiempo requerido por el pulso para volver al sensor. Finalmente, convertirmos el tiempo en distancia mediante la ecuación correspondiente.
+
+Observar que intentamos emplear siempre aritmética de enteros, evitando usar números en coma flotante. Esto es debido a que las operaciones en coma flotante ralentizan mucho el procesador, y suponen cargar un gran número de librerías en memoria.
+
+```
+const int echoPin = 5;
+const int triggerPin = 6;
+long duration, distanceCm;
+
+void setup() {
+   Serial.begin(9600);
+   pinMode(triggerPin, OUTPUT);
+   pinMode(echoPin, INPUT);
+}
+
+void loop() {
+   int cm = ping(triggerPin, echoPin);
+   Serial.print("Distancia: ");
+   Serial.println(cm);
+   delay(1000);
+}
+
+int ping(int triggerPin, int echoPin) {
+   digitalWrite(triggerPin, LOW);  //para generar un pulso limpio ponemos a LOW 4us
+   delayMicroseconds(4);
+   digitalWrite(triggerPin, HIGH);  //generamos Trigger (disparo) de 10us
+   delayMicroseconds(10);
+   digitalWrite(triggerPin, LOW);
+
+   duration = pulseIn(echoPin, HIGH);  //medimos el tiempo entre pulsos, en microsegundos
+
+   distanceCm = duration * 10 / 292/ 2;   //convertimos a distancia, en cm
+   return distanceCm;
+}
+```
+
+Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.
+
+#### Con la Librería NewPing
+
+Otra opción es emplear una librería para facilitarnos el proceso, como por ejemplo la librería [NewPing](https://playground.arduino.cc/Code/NewPing/) disponible en el gestor de librerías del IDE de Arduino.
+
+La librería NewPing aporta funciones adicionales, como la opción de realizar un [filtro mediana](http://www.academicos.ccadet.unam.mx/jorge.marquez/cursos/imagenes_neurobiomed/Mediana_filtro.pdf) para eliminar el ruido, o **emplear el mismo pin como trigger y echo**, lo que nos permite ahorrar muchos pines en caso de tener múltiples sensores de ultrasonidos.
+
+La librería proporciona diversos ejemplos para ilustrar su uso. El siguiente ejemplo basado en ellos, muestra el funcionamiento con un único pin para trigger y echo.
+
+
+```
+#include <NewPing.h>
+
+const int UltrasonicPin = 5;
+const int MaxDistance = 200;
+
+NewPing sonar(UltrasonicPin, UltrasonicPin, MaxDistance);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  delay(50);                      // esperar 50ms entre pings (29ms como minimo)
+  Serial.print(sonar.ping_cm()); // obtener el valor en cm (0 = fuera de rango)
+  Serial.println("cm");
+}
+```
+
+## Ejercicio 2.1: Sensor de distancia con alarma y LED.
+
+### Objetivo General
+
+- Vamos a extender el proyecto usando un Zumbador (Buzzer Activo) y un LED para detectar una distancia límite.
+
+### Materiales adicionales
+
+- Buzzer Activo
+- LED
+- Resistencia 220 Ohm
+
+
+### ¿Qué es un Buzzer Activo?
+
+<img src="https://img.staticbg.com/thumb/large/oaupload/banggood/images/AC/A4/acbca30a-61b7-4d61-b611-72a42501b713.JPG.webp" width="250" align="left">
 
 Los buzzer activos, en ocasiones denominados zumbadores, son dispositivos que generan un sonido de una frecuencia determinada y fija cuando son conectados a tensión.
 
 Un buzzer activo incorpora un oscilador simple por lo que únicamente es necesario suministrar corriente al dispositivo para que emita sonido. En oposición, los buzzer pasivos necesitan recibir una onda de la frecuencia.
 
-Al incorporar de forma interna la electrónica necesaria para hacer vibrar el altavoz un buzzer activo resulta muy sencillo de conectar y controlar. Además, no suponen carga para el procesador ya que no este no tiene que generar la onda eléctrica que se convertirá en sonido.
+Al incorporar de forma interna la electrónica necesaria para hacer vibrar el altavoz un buzzer activo resulta muy sencillo de conectar y controlar. Además, no suponen carga para el procesador ya que este no tiene que generar la onda eléctrica que se convertirá en sonido.
 
-En contra posición, tienen la desventaja de que no podremos variar el tono del sonido emitido, por lo que no podremos realizar melodías, cosa que si podremos hacer con los [buzzer pasivos (tmb12a05)](https://www.luisllamas.es/reproducir-sonidos-arduino-buzzer-pasivo-altavoz/).
+En contra posición, tienen la desventaja de que no podremos variar el tono del sonido emitido, por lo que no podremos realizar melodías, cosa que si podremos hacer con los buzzer pasivos.
 
-### Código
+
+Físicamente pueden ser muy parecidos, o incluso idénticos, a los buzzer pasivos, por lo que puede llegar a ser difícil determinar a simple vista si un buzzer es activo o pasivo.
+
+Existen buzzer activos en un gran abanico de tamaños y potencias, desde tonos casi imperceptibles hasta alarmas realmente estridentes. El consumo eléctrico, lógicamente, también varia con la potencia del buzzer.
+
+Podemos emplear los buzzer activos de menor potencia, por ejemplo, para dar avisos al usuario o proporcionar un feedback ante alguna acción, como pulsar un botón, para que el usuario compruebe que su acción ha sido recibida.
+
+Por su parte, los buzzer de mayor potencia son adecuados para generar alarmas de forma sencilla, por ejemplo, combinados con un sensor de movimiento, un sensor de agua, o un sensor de llama, entre otros.
+
+### Características
+
+- Material: ABS (plástico)
+- Color: Negro
+- Tamaño: 9 x 11.8 mm (L x D) / 0.35 x 0.46 inch
+- Voltaje nominal: 5V
+- Tensión de funcionamiento: 4-8V
+- Corriente nominal (MAX): 30 mA
+- Min sound output at 10cm: 85 dB
+- Frecuencia de resonancia: 2300±300 Hz
+- Temperatura de funcionamiento: -27 to +70 °C
+- Temperatura de almacenamiento: -30 to +105 °C
+
+### Montaje
+
+<img src="https://lh3.google.com/u/0/d/1WklsRgIqXQrclYSXZOLPwCSz_VxoqboX=w1710-h1546-iv1" width="700">
 
 ```
 // defines pins numbers
@@ -103,7 +225,7 @@ digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
 
 // Calculating the distance
-distance= duration*0.034/2;
+distance = duration * 10 / 292/ 2;
 
 safetyDistance = distance;
 if (safetyDistance <= 5){
@@ -121,36 +243,9 @@ Serial.println(distance);
 }
 ```
 
-Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.
+## Fuente:
 
-
-Conexiones:
-
-El módulo ultrasónico HC-SR04 tiene 4 pins, Ground, VCC, Trig and Echo. El pint Ground y VCC necesitan ser conectados al pin de Ground y de 5 volts de la placa Arduino respectivamente y los pins trig y echo a cualquier pin Digital I/O de la placa Arduino.
-
-* Sensor HC-SR04 conectarlo a la Breadboard
-* Pin VCC del sensor conectarlo al pin +5V del Arduino
-* Pin GND del sensor conectarlo al pin GND del Arduino
-* Pin Trig del sensor conectarlo al pin Digital I/O #9 del Arduino
-* Pin Echo del sensor conectarlo al pin Digital I/O #10 del Arduino
-
-**Buzzer y LED**
-* Conectar el Buzzer a la Breadboard
-* La pata larga (+) del Buzzer long leg  conectarla al pin Digital I/O #11 del Arduino
-* La pata corta (-) del Buzzer conectarla al pin GND del Arduino
-* Conectar el LED a la Breadboard
-* Conectar la Resistencia a la pata larga (+) del LED
-* Conectar la otra pata de la resistencia (de la pata larga del LED) al pin Digital #13 del Arduino
-* A la pata corta (-) del LED conectarla al pin GND del Arduino
-
-Esquema de Montaje:
-
-<img src="https://lh3.google.com/u/0/d/1WklsRgIqXQrclYSXZOLPwCSz_VxoqboX=w1710-h1546-iv1" width="700">
-
-
-
-### Fuente:
-
-* https://www.luisllamas.es/detectar-obstaculos-con-sensor-infrarrojo-y-arduino/
-* https://www.luisllamas.es/arduino-buzzer-activo/
+* https://www.luisllamas.es/medir-distancia-con-arduino-y-sensor-de-ultrasonidos-hc-sr04/
+* https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf
 * http://www.mertarduino.com/using-ultrasonic-distance-sensor-hc-sr04-with-buzzer-led-and-arduino/2018/11/22/
+* https://www.luisllamas.es/arduino-buzzer-activo/
