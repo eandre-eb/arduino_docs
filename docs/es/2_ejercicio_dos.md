@@ -249,3 +249,4 @@ Serial.println(distance);
 * https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf
 * http://www.mertarduino.com/using-ultrasonic-distance-sensor-hc-sr04-with-buzzer-led-and-arduino/2018/11/22/
 * https://www.luisllamas.es/arduino-buzzer-activo/
+* [PWM Explicación](https://www.youtube.com/watch?v=Wis5qchzhA8)
