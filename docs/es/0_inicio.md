@@ -16,14 +16,17 @@ title: Introducción
 Gracias a que posee una experiencia de usuario simple y accesible, Arduino se ha utilizado en miles de proyectos y aplicaciones diferentes. El software Arduino es fácil de usar para principiantes, pero lo suficientemente flexible para usuarios avanzados. Se ejecuta en Mac, Windows y Linux. Arduino es una herramienta clave para aprender cosas nuevas. Cualquier persona (niños, aficionados, artistas, programadores) puede comenzar a hacer modificaciones siguiendo las instrucciones paso a paso de un kit.
 
 ## Historia
+<img src="https://uniandes.edu.co/sites/default/files/rafael-hernando-barragan-2.jpg" width="250" align="left">
 
-<img src="https://arduinohistory.github.io/images/full/WiringBoard-Assembled.jpg" width="300" align="left">
-
-La historia de Arduino comenzó como un proyecto de tesis de maestría del colombiano **Hernando Barragán** en 2003 y sus asesores [Massimo Banzi](https://it.wikipedia.org/wiki/Massimo_Banzi) y [Casey Reas](https://en.wikipedia.org/wiki/Casey_Reas) (conocido por su trabajo en el lenguaje y entorno de programación [Processing](https://en.wikipedia.org/wiki/Processing_(programming_language)) ) en el Interaction Design Institute Ivrea (IDII) de Italia. Su objetivo principal fue el crear una herramienta que fuera fácil de usar, abstrayendo los detalles a menudo complicados de la electrónica para que puedan centrarse en sus propios objetivos.
+La historia de Arduino comenzó como un proyecto de tesis de maestría del colombiano [Hernando Barragán](https://uniandes.edu.co/es/noticias/arquitectura-y-diseno/hernando-barragan-nuevo-arquitecto-diseno-en-jefe-plataforma-arduino) en 2003 y sus asesores [Massimo Banzi](https://it.wikipedia.org/wiki/Massimo_Banzi) y [Casey Reas](https://en.wikipedia.org/wiki/Casey_Reas) (conocido por su trabajo en el lenguaje y entorno de programación [Processing](https://en.wikipedia.org/wiki/Processing_(programming_language)) ) en el Interaction Design Institute Ivrea (IDII) de Italia. Su objetivo principal fue el crear una herramienta que fuera fácil de usar, abstrayendo los detalles a menudo complicados de la electrónica para que puedan centrarse en sus propios objetivos.
 
 En 2005, Massimo Banzi, junto con David Mellis (un estudiante de IDII en ese momento) y David Cuartielles, agregaron soporte para el microcontrolador ATmega8 (más barato) para Wiring. Luego forkearon (o copiaron) el código fuente de Wiring y comenzaron a ejecutarlo como un proyecto separado, llamado Arduino.
 
-El nombre "Arduino" deriva del nombre del bar en Ivrea, Italia frecuentado por los fundadores del proyecto, un nombre que a su vez recuerda al de Arduino d'Ivrea , rey de Italia en 1002.
+<img src="https://arduinohistory.github.io/images/full/WiringBoard-Assembled.jpg" width="300" align="left">
+
+El nombre **"Arduino"** deriva del nombre del bar en Ivrea, Italia frecuentado por los fundadores del proyecto, un nombre que a su vez recuerda al de Arduino d'Ivrea , rey de Italia en 1002.
+
+Hernando actualmente es decano y docente de la Facultad de Arquitectura y Diseño de la Universidad de los Andes, Colombia y Director de Estrategia de Diseño en Arduino.
 
 [Leer más](https://arduinohistory.github.io/) |
 [Ver Tesis](http://people.interactionivrea.org/h.barragan/thesis/thesis_low_res.pdf)
