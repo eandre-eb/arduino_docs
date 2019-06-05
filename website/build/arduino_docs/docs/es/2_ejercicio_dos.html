@@ -59,7 +59,7 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia"></a><a href="#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; - Sensor ultrasónico de distancia</h2>
 <h3><a class="anchor" aria-hidden="true" id="objetivo-general"></a><a href="#objetivo-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
 <ul>
-<li>En éste ejercicio vamos a aprender a utilzar el sensor ultrasónico HC-SR04 y como usarlo con un Buzzer y un LED.</li>
+<li>En éste ejercicio vamos a aprender a utilzar el sensor ultrasónico <a href="https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf">HC-SR04</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="materiales"></a><a href="#materiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales</h3>
 <ul>
@@ -69,9 +69,6 @@
 <li>Sensor ultrasónico HC-SR04</li>
 <li>Breadboard/Protoboard</li>
 <li>Jumper Wires</li>
-<li>Buzzer</li>
-<li>LED</li>
-<li>Resistencia de 220 Ohm</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="que-es-un-sensor-de-ultrasonido"></a><a href="#que-es-un-sensor-de-ultrasonido" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un sensor de ultrasonido?</h3>
 <p>Un sensor de ultra sonidos es un dispositivo para medir distancias. Su funcionamiento se base en el envío de un pulso de alta frecuencia, no audible por el ser humano. Este pulso rebota en los objetos cercanos y es reflejado hacia el sensor, que dispone de un micrófono adecuado para esa frecuencia.</p>
@@ -88,12 +85,110 @@
 <p><img src="https://www.luisllamas.es/wp-content/ql-cache/quicklatex.com-9819e4766edeb37d3571e0b9656bd98d_l3.png" width="400"></p>
 <p>El motivo de divir por dos el tiempo (además de la velociad del sonido en las unidades apropiadas, que hemos calculado antes) es porque hemos medido el tiempo que tarda el pulso en ir y volver, por lo que la distancia recorrida por el pulso es el doble de la que queremos medir.</p>
 <p><img src="https://www.luisllamas.es/wp-content/uploads/2015/06/sensor-ultrasonico-explicacion.png" width="400"></p>
-<h3><a class="anchor" aria-hidden="true" id="que-es-un-buzzer-activo"></a><a href="#que-es-un-buzzer-activo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un buzzer activo?</h3>
+<h3><a class="anchor" aria-hidden="true" id="esquema-de-montaje"></a><a href="#esquema-de-montaje" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Esquema de Montaje</h3>
+<p><img src="https://www.luisllamas.es/wp-content/uploads/2015/06/arduino-ultrasonidos-montaje.png" width="500"></p>
+<p><strong>Conexiones</strong>:</p>
+<p>El módulo ultrasónico HC-SR04 tiene 4 pins, Ground, VCC, Trig and Echo. El pint Ground y VCC necesitan ser conectados al pin de Ground y de 5 volts de la placa Arduino respectivamente y los pins trig y echo a cualquier pin Digital I/O de la placa Arduino.</p>
+<ul>
+<li>Sensor HC-SR04 conectarlo a la Breadboard</li>
+<li>Pin VCC del sensor conectarlo al pin +5V del Arduino</li>
+<li>Pin GND del sensor conectarlo al pin GND del Arduino</li>
+<li>Pin Trig del sensor conectarlo al pin Digital I/O #6 del Arduino</li>
+<li>Pin Echo del sensor conectarlo al pin Digital I/O #5 del Arduino</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="codigo"></a><a href="#codigo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Código</h3>
+<h4><a class="anchor" aria-hidden="true" id="sin-librerias"></a><a href="#sin-librerias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sin librerías</h4>
+<p>Para activar el sensor necesitamos generar un pulso eléctrico en el pin Trigger (disparador) de al menos 10us. Previamente, pondremos el pin a Low durante 4us para asegurar un disparo limpio.</p>
+<p>Posteriormente usamos la función <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/">pulseIn</a> para obtener el tiempo requerido por el pulso para volver al sensor. Finalmente, convertirmos el tiempo en distancia mediante la ecuación correspondiente.</p>
+<p>Observar que intentamos emplear siempre aritmética de enteros, evitando usar números en coma flotante. Esto es debido a que las operaciones en coma flotante ralentizan mucho el procesador, y suponen cargar un gran número de librerías en memoria.</p>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> echoPin = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> triggerPin = <span class="hljs-number">6</span>;
+<span class="hljs-keyword">long</span> duration, distanceCm;
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+   <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+   <span class="hljs-built_in">pinMode</span>(triggerPin, <span class="hljs-literal">OUTPUT</span>);
+   <span class="hljs-built_in">pinMode</span>(echoPin, <span class="hljs-literal">INPUT</span>);
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+   <span class="hljs-keyword">int</span> cm = ping(triggerPin, echoPin);
+   <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Distancia: "</span>);
+   <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(cm);
+   <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);
+}
+
+<span class="hljs-keyword">int</span> ping(<span class="hljs-keyword">int</span> triggerPin, <span class="hljs-keyword">int</span> echoPin) {
+   <span class="hljs-built_in">digitalWrite</span>(triggerPin, <span class="hljs-literal">LOW</span>);  <span class="hljs-comment">//para generar un pulso limpio ponemos a LOW 4us</span>
+   <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">4</span>);
+   <span class="hljs-built_in">digitalWrite</span>(triggerPin, <span class="hljs-literal">HIGH</span>);  <span class="hljs-comment">//generamos Trigger (disparo) de 10us</span>
+   <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+   <span class="hljs-built_in">digitalWrite</span>(triggerPin, <span class="hljs-literal">LOW</span>);
+
+   duration = <span class="hljs-built_in">pulseIn</span>(echoPin, <span class="hljs-literal">HIGH</span>);  <span class="hljs-comment">//medimos el tiempo entre pulsos, en microsegundos</span>
+
+   distanceCm = duration * <span class="hljs-number">10</span> / <span class="hljs-number">292</span>/ <span class="hljs-number">2</span>;   <span class="hljs-comment">//convertimos a distancia, en cm</span>
+   <span class="hljs-built_in">return</span> distanceCm;
+}
+</code></pre>
+<p>Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.</p>
+<h4><a class="anchor" aria-hidden="true" id="con-la-libreria-newping"></a><a href="#con-la-libreria-newping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Con la Librería NewPing</h4>
+<p>Otra opción es emplear una librería para facilitarnos el proceso, como por ejemplo la librería <a href="https://playground.arduino.cc/Code/NewPing/">NewPing</a> disponible en el gestor de librerías del IDE de Arduino.</p>
+<p>La librería NewPing aporta funciones adicionales, como la opción de realizar un <a href="http://www.academicos.ccadet.unam.mx/jorge.marquez/cursos/imagenes_neurobiomed/Mediana_filtro.pdf">filtro mediana</a> para eliminar el ruido, o <strong>emplear el mismo pin como trigger y echo</strong>, lo que nos permite ahorrar muchos pines en caso de tener múltiples sensores de ultrasonidos.</p>
+<p>La librería proporciona diversos ejemplos para ilustrar su uso. El siguiente ejemplo basado en ellos, muestra el funcionamiento con un único pin para trigger y echo.</p>
+<pre><code class="hljs"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;NewPing.h&gt;</span></span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> UltrasonicPin = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MaxDistance = <span class="hljs-number">200</span>;
+
+NewPing sonar(UltrasonicPin, UltrasonicPin, MaxDistance);
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">50</span>);                      <span class="hljs-comment">// esperar 50ms entre pings (29ms como minimo)</span>
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(sonar.ping_cm()); <span class="hljs-comment">// obtener el valor en cm (0 = fuera de rango)</span>
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"cm"</span>);
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ejercicio-21-sensor-de-distancia-con-alarma-y-led"></a><a href="#ejercicio-21-sensor-de-distancia-con-alarma-y-led" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejercicio 2.1: Sensor de distancia con alarma y LED.</h2>
+<h3><a class="anchor" aria-hidden="true" id="objetivo-general-1"></a><a href="#objetivo-general-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
+<ul>
+<li>Vamos a extender el proyecto usando un Zumbador (Buzzer Activo) y un LED para detectar una distancia límite.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="materiales-adicionales"></a><a href="#materiales-adicionales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales adicionales</h3>
+<ul>
+<li>Buzzer Activo</li>
+<li>LED</li>
+<li>Resistencia 220 Ohm</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="que-es-un-buzzer-activo"></a><a href="#que-es-un-buzzer-activo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un Buzzer Activo?</h3>
+<p><img src="https://img.staticbg.com/thumb/large/oaupload/banggood/images/AC/A4/acbca30a-61b7-4d61-b611-72a42501b713.JPG.webp" width="250" align="left"></p>
 <p>Los buzzer activos, en ocasiones denominados zumbadores, son dispositivos que generan un sonido de una frecuencia determinada y fija cuando son conectados a tensión.</p>
 <p>Un buzzer activo incorpora un oscilador simple por lo que únicamente es necesario suministrar corriente al dispositivo para que emita sonido. En oposición, los buzzer pasivos necesitan recibir una onda de la frecuencia.</p>
-<p>Al incorporar de forma interna la electrónica necesaria para hacer vibrar el altavoz un buzzer activo resulta muy sencillo de conectar y controlar. Además, no suponen carga para el procesador ya que no este no tiene que generar la onda eléctrica que se convertirá en sonido.</p>
-<p>En contra posición, tienen la desventaja de que no podremos variar el tono del sonido emitido, por lo que no podremos realizar melodías, cosa que si podremos hacer con los <a href="https://www.luisllamas.es/reproducir-sonidos-arduino-buzzer-pasivo-altavoz/">buzzer pasivos (tmb12a05)</a>.</p>
-<h3><a class="anchor" aria-hidden="true" id="codigo"></a><a href="#codigo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Código</h3>
+<p>Al incorporar de forma interna la electrónica necesaria para hacer vibrar el altavoz un buzzer activo resulta muy sencillo de conectar y controlar. Además, no suponen carga para el procesador ya que este no tiene que generar la onda eléctrica que se convertirá en sonido.</p>
+<p>En contra posición, tienen la desventaja de que no podremos variar el tono del sonido emitido, por lo que no podremos realizar melodías, cosa que si podremos hacer con los buzzer pasivos.</p>
+<p>Físicamente pueden ser muy parecidos, o incluso idénticos, a los buzzer pasivos, por lo que puede llegar a ser difícil determinar a simple vista si un buzzer es activo o pasivo.</p>
+<p>Existen buzzer activos en un gran abanico de tamaños y potencias, desde tonos casi imperceptibles hasta alarmas realmente estridentes. El consumo eléctrico, lógicamente, también varia con la potencia del buzzer.</p>
+<p>Podemos emplear los buzzer activos de menor potencia, por ejemplo, para dar avisos al usuario o proporcionar un feedback ante alguna acción, como pulsar un botón, para que el usuario compruebe que su acción ha sido recibida.</p>
+<p>Por su parte, los buzzer de mayor potencia son adecuados para generar alarmas de forma sencilla, por ejemplo, combinados con un sensor de movimiento, un sensor de agua, o un sensor de llama, entre otros.</p>
+<h3><a class="anchor" aria-hidden="true" id="caracteristicas"></a><a href="#caracteristicas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Características</h3>
+<ul>
+<li>Material: ABS (plástico)</li>
+<li>Color: Negro</li>
+<li>Tamaño: 9 x 11.8 mm (L x D) / 0.35 x 0.46 inch</li>
+<li>Voltaje nominal: 5V</li>
+<li>Tensión de funcionamiento: 4-8V</li>
+<li>Corriente nominal (MAX): 30 mA</li>
+<li>Min sound output at 10cm: 85 dB</li>
+<li>Frecuencia de resonancia: 2300±300 Hz</li>
+<li>Temperatura de funcionamiento: -27 to +70 °C</li>
+<li>Temperatura de almacenamiento: -30 to +105 °C</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="montaje"></a><a href="#montaje" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Montaje</h3>
+<p><img src="https://lh3.google.com/u/0/d/1WklsRgIqXQrclYSXZOLPwCSz_VxoqboX=w1710-h1546-iv1" width="700"></p>
 <pre><code class="hljs"><span class="hljs-comment">// defines pins numbers</span>
 <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> trigPin = <span class="hljs-number">9</span>;
 <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> echoPin = <span class="hljs-number">10</span>;
@@ -129,7 +224,7 @@
 duration = <span class="hljs-built_in">pulseIn</span>(echoPin, <span class="hljs-literal">HIGH</span>);
 
 <span class="hljs-comment">// Calculating the distance</span>
-distance= duration*<span class="hljs-number">0.034</span>/<span class="hljs-number">2</span>;
+distance = duration * <span class="hljs-number">10</span> / <span class="hljs-number">292</span>/ <span class="hljs-number">2</span>;
 
 safetyDistance = distance;
 <span class="hljs-built_in">if</span> (safetyDistance &lt;= <span class="hljs-number">5</span>){
@@ -146,32 +241,11 @@ safetyDistance = distance;
 <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(distance);
 }
 </code></pre>
-<p>Para probar este código, conecta tu arduino, asegúrate de que el puerto esté correctamente configurado, verifica el código (compila) y luego cárgalo. Verás como el LED integrado a la arduino comienza a parpadear cada un segundo.</p>
-<p>Conexiones:</p>
-<p>El módulo ultrasónico HC-SR04 tiene 4 pins, Ground, VCC, Trig and Echo. El pint Ground y VCC necesitan ser conectados al pin de Ground y de 5 volts de la placa Arduino respectivamente y los pins trig y echo a cualquier pin Digital I/O de la placa Arduino.</p>
+<h2><a class="anchor" aria-hidden="true" id="fuente"></a><a href="#fuente" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fuente:</h2>
 <ul>
-<li>Sensor HC-SR04 conectarlo a la Breadboard</li>
-<li>Pin VCC del sensor conectarlo al pin +5V del Arduino</li>
-<li>Pin GND del sensor conectarlo al pin GND del Arduino</li>
-<li>Pin Trig del sensor conectarlo al pin Digital I/O #9 del Arduino</li>
-<li>Pin Echo del sensor conectarlo al pin Digital I/O #10 del Arduino</li>
-</ul>
-<p><strong>Buzzer y LED</strong></p>
-<ul>
-<li>Conectar el Buzzer a la Breadboard</li>
-<li>La pata larga (+) del Buzzer long leg  conectarla al pin Digital I/O #11 del Arduino</li>
-<li>La pata corta (-) del Buzzer conectarla al pin GND del Arduino</li>
-<li>Conectar el LED a la Breadboard</li>
-<li>Conectar la Resistencia a la pata larga (+) del LED</li>
-<li>Conectar la otra pata de la resistencia (de la pata larga del LED) al pin Digital #13 del Arduino</li>
-<li>A la pata corta (-) del LED conectarla al pin GND del Arduino</li>
-</ul>
-<p>Esquema de Montaje:</p>
-<p><img src="https://lh3.google.com/u/0/d/1WklsRgIqXQrclYSXZOLPwCSz_VxoqboX=w1710-h1546-iv1" width="700"></p>
-<h3><a class="anchor" aria-hidden="true" id="fuente"></a><a href="#fuente" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fuente:</h3>
-<ul>
-<li><a href="https://www.luisllamas.es/detectar-obstaculos-con-sensor-infrarrojo-y-arduino/">https://www.luisllamas.es/detectar-obstaculos-con-sensor-infrarrojo-y-arduino/</a></li>
-<li><a href="https://www.luisllamas.es/arduino-buzzer-activo/">https://www.luisllamas.es/arduino-buzzer-activo/</a></li>
+<li><a href="https://www.luisllamas.es/medir-distancia-con-arduino-y-sensor-de-ultrasonidos-hc-sr04/">https://www.luisllamas.es/medir-distancia-con-arduino-y-sensor-de-ultrasonidos-hc-sr04/</a></li>
+<li><a href="https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf">https://cdn.datasheetspdf.com/pdf-down/H/C/-/HC-SR04-Cytron.pdf</a></li>
 <li><a href="http://www.mertarduino.com/using-ultrasonic-distance-sensor-hc-sr04-with-buzzer-led-and-arduino/2018/11/22/">http://www.mertarduino.com/using-ultrasonic-distance-sensor-hc-sr04-with-buzzer-led-and-arduino/2018/11/22/</a></li>
+<li><a href="https://www.luisllamas.es/arduino-buzzer-activo/">https://www.luisllamas.es/arduino-buzzer-activo/</a></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/1_ejercicio_uno"><span class="arrow-prev">← </span><span>Ejercicio 1: &quot;Blink&quot;</span></a><a class="docs-next button" href="/arduino_docs/docs/home"><span>home</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; - Sensor ultrasónico de distancia</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#que-es-un-sensor-de-ultrasonido">¿Qué es un sensor de ultrasonido?</a></li><li><a href="#como-funciona">¿Cómo funciona?</a></li><li><a href="#que-es-un-buzzer-activo">¿Qué es un buzzer activo?</a></li><li><a href="#codigo">Código</a></li><li><a href="#fuente">Fuente:</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/1_ejercicio_uno"><span class="arrow-prev">← </span><span>Ejercicio 1: &quot;Blink&quot;</span></a><a class="docs-next button" href="/arduino_docs/docs/home"><span>home</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-2-ultrasonic-distance-sensor-sensor-ultrasonico-de-distancia">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot; - Sensor ultrasónico de distancia</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#que-es-un-sensor-de-ultrasonido">¿Qué es un sensor de ultrasonido?</a></li><li><a href="#como-funciona">¿Cómo funciona?</a></li><li><a href="#esquema-de-montaje">Esquema de Montaje</a></li><li><a href="#codigo">Código</a></li></ul></li><li><a href="#ejercicio-21-sensor-de-distancia-con-alarma-y-led">Ejercicio 2.1: Sensor de distancia con alarma y LED.</a><ul class="toc-headings"><li><a href="#objetivo-general-1">Objetivo General</a></li><li><a href="#materiales-adicionales">Materiales adicionales</a></li><li><a href="#que-es-un-buzzer-activo">¿Qué es un Buzzer Activo?</a></li><li><a href="#caracteristicas">Características</a></li><li><a href="#montaje">Montaje</a></li></ul></li><li><a href="#fuente">Fuente:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
