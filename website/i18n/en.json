@@ -17,6 +17,12 @@
       "es/2_ejercicio_dos": {
         "title": "Ejercicio 2: \"Ultrasonic Distance Sensor\""
       },
+      "es/3_ejercicio_tres": {
+        "title": "Ejercicio 3: \"Velocidad y Dirección de un Motor CC\""
+      },
+      "es/4_ejercicio_cuatro": {
+        "title": "Ejercicio 4: \"Conexión de un Servo motor\""
+      },
       "home": {
         "title": "Home",
         "sidebar_label": "home"
