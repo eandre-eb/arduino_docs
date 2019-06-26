@@ -23,6 +23,9 @@
       "es/4_ejercicio_cuatro": {
         "title": "Ejercicio 4: \"Conexión de un Servomotor\""
       },
+      "es/5_proyecto_integrador_eje_1": {
+        "title": "Proyecto integrador: \"Control por Gestos usando Arduino y Python\""
+      },
       "home": {
         "title": "Home",
         "sidebar_label": "home"
