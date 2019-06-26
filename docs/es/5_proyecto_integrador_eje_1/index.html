@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot; · Arduino Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;proyecto-integrador-control-por-gestos-usando-arduino-y-python&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#proyecto-integrador-control-por-gestos-usando-arduino-y-python&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Proyecto integrador: &amp;quot;Control por Gestos usando Arduino y Python&amp;quot;&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot; · Arduino Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cristianemoyano.github.io/arduino_docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;proyecto-integrador-control-por-gestos-usando-arduino-y-python&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#proyecto-integrador-control-por-gestos-usando-arduino-y-python&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Proyecto integrador: &amp;quot;Control por Gestos usando Arduino y Python&amp;quot;&lt;/h2&gt;
+"/><meta property="og:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/arduino_docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/atom.xml" title="Arduino Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/feed.xml" title="Arduino Docs Blog RSS Feed"/><link rel="stylesheet" href="/arduino_docs/css/main.css"/><script src="/arduino_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/arduino_docs/"><img class="logo" src="/arduino_docs/img/favicon.png" alt="Arduino Docs"/><h2 class="headerTitleWithLogo">Arduino Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/arduino_docs/docs/home" target="_self">Docs</a></li><li class=""><a href="/arduino_docs/help" target="_self">Help</a></li><li class=""><a href="/arduino_docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Español</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">English</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/en/0_getting-started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Español</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/0_inicio">Introducción</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/1_ejercicio_uno">Ejercicio 1: &quot;Blink&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/2_ejercicio_dos">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/3_ejercicio_tres">Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/4_ejercicio_cuatro">Ejercicio 4: &quot;Conexión de un Servomotor&quot;</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/arduino_docs/docs/es/5_proyecto_integrador_eje_1">Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot;</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Home</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/home">home</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot;</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="proyecto-integrador-control-por-gestos-usando-arduino-y-python"></a><a href="#proyecto-integrador-control-por-gestos-usando-arduino-y-python" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot;</h2>
+<h3><a class="anchor" aria-hidden="true" id="objetivo-general"></a><a href="#objetivo-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
+<p>Comandar programáticamente el reproductor de Youtube mediante gestos. Leeremos los comandos desde el puerto serial enviados por Arduino y usaremos un software desarrollado en Python como interfaz.</p>
+<h3><a class="anchor" aria-hidden="true" id="materiales"></a><a href="#materiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales</h3>
+<ul>
+<li>Placa Arduino Uno-R3</li>
+<li>Un cable USB tipo A/B de impresora</li>
+<li>Una computadora</li>
+<li>Conexión a internet</li>
+<li>Breadboard/Protoboard</li>
+<li>Jumper Wires</li>
+<li>2 sensores ultrasónicos HC-SR04</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="1ra-parte-enviar-comandos-con-arduino"></a><a href="#1ra-parte-enviar-comandos-con-arduino" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1ra Parte: Enviar comandos con Arduino</h3>
+<ol>
+<li>Carga el siguiente programa a la placa Arduino.</li>
+</ol>
+<pre><code class="hljs"><span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"play_pause"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"rewind"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"forward"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"volume_up"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"volume_down"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"mute_unmute"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"mute_unmute"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"fullscreen"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"escape"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"captions"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"captions"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"play_pause"</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+}
+</code></pre>
+<p><strong><em>IMPORTANTE</em></strong>:
+Puedes visualizar los comandos enviados al puerto serial usando el monitor provisto por el IDE (Herramientas &gt; Monitor Serial). Pero no dejes el monitor abierto porque esto bloqueara la lectura del puerto.</p>
+<h3><a class="anchor" aria-hidden="true" id="2da-parte-interfaz-en-python"></a><a href="#2da-parte-interfaz-en-python" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2da Parte: Interfaz en Python</h3>
+<p><strong><em>IMPORTANTE</em></strong>:
+Mantén conectada la placa Arduino a tu computadora.</p>
+<p><code>Requerimiento: Python 3.x</code></p>
+<ol>
+<li>Descarga el siguiente repositorio:</li>
+</ol>
+<pre><code class="hljs">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/cristianemoyano/gesture_control.git
+cd gesture_control
+</code></pre>
+<ol start="2">
+<li>Instala las dependencias:</li>
+</ol>
+<pre><code class="hljs"><span class="hljs-meta"># crea un entorno virtual en Python 3</span>
+<span class="hljs-built_in">make</span> env
+
+<span class="hljs-meta"># activa el entorno creado</span>
+<span class="hljs-built_in">make</span> activate
+
+<span class="hljs-meta"># instala las dependencias</span>
+<span class="hljs-built_in">make</span> setup
+
+<span class="hljs-meta"># corre el programa</span>
+<span class="hljs-built_in">make</span> <span class="hljs-keyword">run</span>
+</code></pre>
+<p>Si al ejecutar <code>make run</code> ves el siguiente mensaje:</p>
+<pre><code class="hljs">arduino - <span class="hljs-literal">ERROR</span> - <span class="hljs-literal">Error</span> <span class="hljs-keyword">open</span> serial <span class="hljs-keyword">port</span>: [Errno <span class="hljs-number">2</span>] could <span class="hljs-keyword">not</span> <span class="hljs-keyword">open</span> <span class="hljs-keyword">port</span> : [Errno <span class="hljs-number">2</span>] No such <span class="hljs-keyword">file</span> <span class="hljs-keyword">or</span> directory: ''
+</code></pre>
+<p>No te preocupes, es el comportamiento esperado. Éste error se debe a que no hemos configurado el puerto con el que se va a comunicar nuestro Arduino.</p>
+<ol start="3">
+<li>Configuración del puerto serial:</li>
+</ol>
+<p>Debemos editar la constante <a href="https://github.com/cristianemoyano/gesture_control/blob/master/main.py#L23">SERIAL_DEVICE_NAME</a> con el &quot;nombre del dispositivo serial&quot;, es decir con el puerto al que nuestro Arduino está conectado.</p>
+<p>¿Cómo puedo listar los puertos de mi computadora? Bueno, para ello tenemos disponible el método <code>serial_ports</code> el cual lista todos los puertos disponibles de tu computadora en la consola.</p>
+<p><strong>(a)</strong> Para ejecutarlo reemplaza <a href="https://github.com/cristianemoyano/gesture_control/blob/master/main.py#L144">éste código</a>:</p>
+<pre><code class="hljs"><span class="hljs-variable"><span class="hljs-keyword">if</span></span> <span class="hljs-variable">__name__</span> == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-function"><span class="hljs-title">read_serial</span>(<span class="hljs-variable">SERIAL_DEVICE_NAME</span>)</span>
+</code></pre>
+<p><strong>(b)</strong> Por éste:</p>
+<pre><code class="hljs"><span class="hljs-variable"><span class="hljs-keyword">if</span></span> <span class="hljs-variable">__name__</span> == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-function"><span class="hljs-title">serial_ports</span>()</span>
+</code></pre>
+<p>En la consola podrás ver los puertos disponibles:</p>
+<pre><code class="hljs">...
+arduino - INFO - {'device': '/dev/cu.usbmodem<span class="hljs-number">1411</span>', 'name': None, 'description': 'Generic CDC', 'hwid': 'USB VID:PID=<span class="hljs-number">2341:0043</span> SER=<span class="hljs-number">55736323539351</span><span class="hljs-number">6152</span>B1 LOCATION=20-1', 'vid': <span class="hljs-number">9025</span>, 'pid': <span class="hljs-number">67</span>, 'location': '20-1', 'manufacturer': 'Arduino (www.arduino.cc)', 'product': 'Generic CDC', 'interface': None}
+
+</code></pre>
+<p>Podrás identificar fácilmente en cuál el puerto de nuestro Arduino.</p>
+<p>El atributo que nos interesa es 'device' que en el ejemplo es '/dev/cu.usbmodem1411'.</p>
+<p><strong>(c)</strong> Luego nos quedaría asignar nuestra constante con el puerto encontrado:</p>
+<pre><code class="hljs"><span class="hljs-attr">SERIAL_DEVICE_NAME</span> = <span class="hljs-string">'/dev/cu.usbmodem1411'</span>
+</code></pre>
+<p>Finalmente deshace los cambios en el paso <strong>(b)</strong> y corre nuevamente el programa:</p>
+<pre><code class="hljs">make <span class="hljs-keyword">run</span><span class="bash">
+</span></code></pre>
+<p>Mensaje esperado:</p>
+<pre><code class="hljs">arduino - <span class="hljs-builtin-name">INFO</span> - Serial<span class="hljs-built_in"> port </span>opened: /dev/cu.usbmodem1411 - Baud rate: 9600 bits/second
+</code></pre>
+<p><strong>¡Muy bien! Estamos recibiendo los comandos enviados por nuestro Arduino.</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="3ra-parte-anadir-los-sensores"></a><a href="#3ra-parte-anadir-los-sensores" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3ra Parte: Añadir los sensores</h3>
+<p><strong><em>El siguiente código funciona solamente para un sensor y está implementada una acción: &quot;play_pause&quot;.</em></strong></p>
+<p><strong>Actividad</strong>:</p>
+<p>Completa el código para que soporte 2 sensores ultrasónicos HC-SR04 e implementa las siguientes acciones:</p>
+<ul>
+<li>rewind</li>
+<li>forward</li>
+<li>volume_up</li>
+<li>volume_down</li>
+<li>mute_unmute</li>
+<li>fullscreen</li>
+<li>escape</li>
+<li>captions</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="codigo-incompleto"></a><a href="#codigo-incompleto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Código incompleto</h4>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> trigger1 = <span class="hljs-number">2</span>; <span class="hljs-comment">//Trigger pin of 1st Sensor</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> echo1 = <span class="hljs-number">3</span>; <span class="hljs-comment">//Echo pin of 1st Sensor</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> trigger2 = <span class="hljs-number">4</span>; <span class="hljs-comment">//Trigger pin of 2nd Sensor</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> echo2 = <span class="hljs-number">5</span>;<span class="hljs-comment">//Echo pin of 2nd Sensor</span>
+<span class="hljs-keyword">int</span> distanceCm, distL, distR;
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+
+  <span class="hljs-built_in">pinMode</span>(trigger1, <span class="hljs-literal">OUTPUT</span>);
+  <span class="hljs-built_in">pinMode</span>(echo1, <span class="hljs-literal">INPUT</span>);
+  <span class="hljs-built_in">pinMode</span>(trigger2, <span class="hljs-literal">OUTPUT</span>);
+  <span class="hljs-built_in">pinMode</span>(echo2, <span class="hljs-literal">INPUT</span>);
+}
+
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  <span class="hljs-comment">//get distance of left sensor</span>
+  distL = calculate_distance(trigger2,echo2);
+
+  <span class="hljs-comment">//Play/Pause one hand</span>
+  <span class="hljs-built_in">if</span> (distL &gt; <span class="hljs-number">8</span>  &amp;&amp; distL &lt; <span class="hljs-number">11</span> ) {
+    <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>(<span class="hljs-string">"play_pause"</span>);
+    <span class="hljs-built_in">delay</span>(<span class="hljs-number">500</span>);
+  }
+}
+
+<span class="hljs-comment">/*###Function to calculate distance###*/</span>
+<span class="hljs-keyword">int</span> calculate_distance(<span class="hljs-keyword">int</span> trigger, <span class="hljs-keyword">int</span> echo)
+{
+  <span class="hljs-built_in">digitalWrite</span>(trigger, <span class="hljs-literal">LOW</span>);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">2</span>);
+  <span class="hljs-built_in">digitalWrite</span>(trigger, <span class="hljs-literal">HIGH</span>);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">digitalWrite</span>(trigger, <span class="hljs-literal">LOW</span>);
+
+  <span class="hljs-keyword">int</span> time_taken = <span class="hljs-built_in">pulseIn</span>(echo, <span class="hljs-literal">HIGH</span>);
+  distanceCm = time_taken * <span class="hljs-number">10</span> / <span class="hljs-number">292</span>/ <span class="hljs-number">2</span>;
+  <span class="hljs-built_in">return</span> distanceCm;
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="montaje"></a><a href="#montaje" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Montaje</h4>
+<p><img src="https://circuitdigest.com/sites/default/files/circuitdiagram_mic/Control-your-Computer-with-Hand-Gestures-using-Arduino-circuit.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="anexos"></a><a href="#anexos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anexos</h2>
+<h3><a class="anchor" aria-hidden="true" id="comunicacion-serie"></a><a href="#comunicacion-serie" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comunicación serie</h3>
+<p>La comunicación serial consiste en el envío de un bit de información de manera secuencial, ésto es, un bit a la vez y a un ritmo acordado entre el emisor y el receptor.</p>
+<p>La comunicación serial en computadores ha seguido los estándares definidos en 1969 por el RS-232 (Recommended Standard 232) que establece niveles de voltaje, velocidad de transmisión de los datos, etc. Por ejemplo, este protocolo establece un nivel de -12v como un uno lógico y un nivel de voltaje de +12v como un cero lógico (por su parte, los microcontroladores emplean por lo general 5v como un uno lógico y 0v como un cero lógico).</p>
+<p>Existen en la actualidad diferentes ejemplos de puertos que comunican información de manera serial (un bit a la vez). El conocido como “puerto serial” ha sido gradualmente reemplazado por el puerto USB (Universal Serial Bus) que permite mayor versatilidad en la conexión de múltiples dispositivos. Aunque en naturaleza serial, no suele referenciarse de esta manera ya que sigue sus propios estándares y no los establecidos por el RS-232.</p>
+<p>La mayoría de los microcontroladores, entre ellos Arduino, poseen un puerto de comunicación serial. Para comunicarse con los computadores personales actuales que poseen únicamente puerto USB requieren de un dispositivo “traductor”. Arduino emplea el integrado <strong>FT232R</strong>, el cual es un convertidor USB-Serial. A través de este integrado el microcontrolador puede recibir y enviar datos a un computador de manera serial.</p>
+<p>Además de realizar las conexiones físicas entre el microcontrolador y el computador, para que pueda establecerse la comunicación serial debe existir un acuerdo previo en la manera como van a ser enviados los datos. Este acuerdo debe incluir los niveles de voltaje que serán usados, el tamaño y formato de cada uno de los mensajes (número de bits que constituirán el tamaño de la palabra, existirá o no un bit de inicio y/o de parada, se empleará o no un bit de paridad), el tipo de lógica empleada (qué voltaje representará un cero o un uno), el orden en que serán enviados los datos (será enviado primero el bit de mayor peso o el de menor peso) y la velocidad de envío de datos.</p>
+<p>Arduino facilita este proceso para que sólo sea necesario especificar la velocidad de envío de los datos. Esta velocidad es conocida como “baud rate” o rata de pulsos por segundo. Velocidades frecuentes de uso son 9600, 19200, 57600 y 115200.</p>
+<h3><a class="anchor" aria-hidden="true" id="tasa-de-baudios-velocidad-de-transmision-baud-rate"></a><a href="#tasa-de-baudios-velocidad-de-transmision-baud-rate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tasa de baudios / Velocidad de transmisión (Baud rate)</h3>
+<p>La tasa de baudios (en inglés baud rate) ―también conocida como baudaje― es el número de unidades de señal por segundo. Un baudio puede contener varios bits.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xWG_6SH_ft4?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2><a class="anchor" aria-hidden="true" id="fuente"></a><a href="#fuente" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fuente:</h2>
+<ul>
+<li><a href="https://circuitdigest.com/microcontroller-projects/control-your-computer-with-hand-gestures">https://circuitdigest.com/microcontroller-projects/control-your-computer-with-hand-gestures</a></li>
+<li><a href="https://galaxi0.wordpress.com/el-puerto-serial/">https://galaxi0.wordpress.com/el-puerto-serial/</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Tasa_de_baudios">https://es.wikipedia.org/wiki/Tasa_de_baudios</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/4_ejercicio_cuatro"><span class="arrow-prev">← </span><span>Ejercicio 4: &quot;Conexión de un Servomotor&quot;</span></a><a class="docs-next button" href="/arduino_docs/docs/home"><span>home</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#proyecto-integrador-control-por-gestos-usando-arduino-y-python">Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot;</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#1ra-parte-enviar-comandos-con-arduino">1ra Parte: Enviar comandos con Arduino</a></li><li><a href="#2da-parte-interfaz-en-python">2da Parte: Interfaz en Python</a></li><li><a href="#3ra-parte-anadir-los-sensores">3ra Parte: Añadir los sensores</a></li></ul></li><li><a href="#anexos">Anexos</a><ul class="toc-headings"><li><a href="#comunicacion-serie">Comunicación serie</a></li><li><a href="#tasa-de-baudios-velocidad-de-transmision-baud-rate">Tasa de baudios / Velocidad de transmisión (Baud rate)</a></li></ul></li><li><a href="#fuente">Fuente:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
