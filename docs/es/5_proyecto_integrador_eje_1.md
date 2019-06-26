@@ -149,7 +149,9 @@ arduino - INFO - Serial port opened: /dev/cu.usbmodem1411 - Baud rate: 9600 bits
 
 ### 3ra Parte: Añadir los sensores
 
-***El siguiente código funciona solamente para un sensor y está implementada una acción: "play_pause".***
+***Importante***
+- Recuerda que para cargar un programa a la placa Arduino el puerto serial debe estar disponible. Por ello, debes detener el programa "gesture_control" en Python para que libere el puerto.
+- El siguiente código funciona solamente con un sensor. Además se implementada una acción/comando: "play_pause".
 
 **Actividad**:
 
