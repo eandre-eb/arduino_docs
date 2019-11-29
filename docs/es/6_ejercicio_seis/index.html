@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot; · Arduino Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-3-velocidad-y-direccion-de-un-motor-cc&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-3-velocidad-y-direccion-de-un-motor-cc&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 3: &amp;quot;Velocidad y Dirección de un Motor CC&amp;quot;&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot; · Arduino Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cristianemoyano.github.io/arduino_docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ejercicio-3-velocidad-y-direccion-de-un-motor-cc&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ejercicio-3-velocidad-y-direccion-de-un-motor-cc&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ejercicio 3: &amp;quot;Velocidad y Dirección de un Motor CC&amp;quot;&lt;/h2&gt;
+"/><meta property="og:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://cristianemoyano.github.io/arduino_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/arduino_docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/atom.xml" title="Arduino Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://cristianemoyano.github.io/arduino_docs/blog/feed.xml" title="Arduino Docs Blog RSS Feed"/><link rel="stylesheet" href="/arduino_docs/css/main.css"/><script src="/arduino_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/arduino_docs/"><img class="logo" src="/arduino_docs/img/favicon.png" alt="Arduino Docs"/><h2 class="headerTitleWithLogo">Arduino Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/arduino_docs/docs/home" target="_self">Docs</a></li><li class=""><a href="/arduino_docs/help" target="_self">Help</a></li><li class=""><a href="/arduino_docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Español</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">English</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/en/0_getting-started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Español</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/0_inicio">Introducción</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/1_ejercicio_uno">Ejercicio 1: &quot;Blink&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/2_ejercicio_dos">Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/arduino_docs/docs/es/3_ejercicio_tres">Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/4_ejercicio_cuatro">Ejercicio 4: &quot;Conexión de un Servomotor&quot;</a></li><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/es/5_proyecto_integrador_eje_1">Proyecto integrador: &quot;Control por Gestos usando Arduino y Python&quot;</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Home</h3><ul class=""><li class="navListItem"><a class="navItem" href="/arduino_docs/docs/home">home</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot;</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="ejercicio-3-velocidad-y-direccion-de-un-motor-cc"></a><a href="#ejercicio-3-velocidad-y-direccion-de-un-motor-cc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot;</h2>
+<h3><a class="anchor" aria-hidden="true" id="objetivo-general"></a><a href="#objetivo-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetivo General</h3>
+<p>Controlar la velocidad y dirección de giro de un motor de corriente contínua con el driver L293D.</p>
+<h3><a class="anchor" aria-hidden="true" id="materiales"></a><a href="#materiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Materiales</h3>
+<ul>
+<li>Placa Arduino Uno-R3</li>
+<li>Un cable USB tipo A/B de impresora</li>
+<li>Una computadora</li>
+<li>Motor de corriente contínua (CC)</li>
+<li><a href="http://pdf1.alldatasheet.com/datasheet-pdf/view/22432/STMICROELECTRONICS/L293D.html">L293D Driver</a></li>
+<li>Breadboard/Protoboard</li>
+<li>Jumper Wires</li>
+<li>Batería 9v</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="intro"></a><a href="#intro" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Intro</h3>
+<p><strong>Leyendo un potenciómetro (entrada analógica)</strong></p>
+<p>Un potenciómetro es simplemente una resistencia variable, que  podemos leer desde Arduino como un valor analógico. En este ejemplo, ese valor controla la velocidad a la que parpadea un LED.</p>
+<p>Conectamos tres cables a la placa Arduino. El primero va a tierra desde uno de los pines externos del potenciómetro. El segundo va de 5 voltios al otro pin externo del potenciómetro. El tercero va desde la entrada analógica 2 hasta el pin central del potenciómetro.</p>
+<p>Al girar el eje del potenciómetro, cambiamos la cantidad de resistencia a cada lado del limpiador que está conectado al pin central del potenciómetro. Esto cambia la &quot;cercanía&quot; relativa de ese pin a 5 voltios y tierra, lo que nos da una entrada analógica diferente. Cuando el eje se gira completamente en una dirección, hay 0 voltios que van al pin, y leemos 0. Cuando el eje se gira completamente en la otra dirección, hay 5 voltios que van al pin y leemos 1023. En el medio, <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/">analogRead()</a> devuelve un número entre 0 y 1023 que es proporcional a la cantidad de voltaje que se aplica al pin.</p>
+<pre><code class="hljs"><span class="hljs-comment">/* Analog Read to LED
+ * ------------------
+ *
+ * turns on and off a light emitting diode(LED) connected to digital
+ * pin 13. The amount of time the LED will be on and off depends on
+ * the value obtained by analogRead(). In the easiest case we connect
+ * a potentiometer to analog pin 2.
+ *
+ * Created 1 December 2005
+ * copyleft 2005 DojoDave &lt;http://www.0j0.org&gt;
+ * http://arduino.berlios.de
+ *
+ */</span>
+
+<span class="hljs-keyword">int</span> potPin = <span class="hljs-number">2</span>;    <span class="hljs-comment">// select the input pin for the potentiometer</span>
+<span class="hljs-keyword">int</span> ledPin = <span class="hljs-number">13</span>;   <span class="hljs-comment">// select the pin for the LED</span>
+<span class="hljs-keyword">int</span> val = <span class="hljs-number">0</span>;       <span class="hljs-comment">// variable to store the value coming from the sensor</span>
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">pinMode</span>(ledPin, <span class="hljs-literal">OUTPUT</span>);  <span class="hljs-comment">// declare the ledPin as an OUTPUT</span>
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  val = <span class="hljs-built_in">analogRead</span>(potPin);    <span class="hljs-comment">// read the value from the sensor</span>
+  <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">HIGH</span>);  <span class="hljs-comment">// turn the ledPin on</span>
+  <span class="hljs-built_in">delay</span>(val);                  <span class="hljs-comment">// stop the program for some time</span>
+  <span class="hljs-built_in">digitalWrite</span>(ledPin, <span class="hljs-literal">LOW</span>);   <span class="hljs-comment">// turn the ledPin off</span>
+  <span class="hljs-built_in">delay</span>(val);                  <span class="hljs-comment">// stop the program for some time</span>
+}
+
+</code></pre>
+<p><strong>Use el montaje del ejercicio uno sumando el potenciómetro</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="parte-1-direccion"></a><a href="#parte-1-direccion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parte 1: Dirección</h3>
+<p><strong>Código</strong></p>
+<pre><code class="hljs"><span class="hljs-keyword">int</span> dir1 = <span class="hljs-number">8</span>;
+<span class="hljs-keyword">int</span> dir2 = <span class="hljs-number">9</span>;
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>() {
+  <span class="hljs-built_in">pinMode</span>(dir1,   <span class="hljs-literal">OUTPUT</span>);
+  <span class="hljs-built_in">pinMode</span>(dir2,   <span class="hljs-literal">OUTPUT</span>);
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>() {
+  <span class="hljs-built_in">digitalWrite</span>(dir1, <span class="hljs-literal">HIGH</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">digitalWrite</span>(dir1, <span class="hljs-literal">LOW</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">digitalWrite</span>(dir2, <span class="hljs-literal">HIGH</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+  <span class="hljs-built_in">digitalWrite</span>(dir2, <span class="hljs-literal">LOW</span>);
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">3000</span>);
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="esquema-de-montaje"></a><a href="#esquema-de-montaje" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Esquema de Montaje</h3>
+<p><strong>1 Motor</strong>
+<img src="https://lh3.google.com/u/0/d/1oDrwRwdWpnj-36RiSDgZYwBbP7odgpBy=w2880-h1578-iv2" alt=""></p>
+<p><strong>2 Motores</strong>
+<img src="https://lh3.google.com/u/0/d/1tiCooirbYLpjnbVBPKs071bjgH_VUSp3=w1710-h1578-iv2" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="parte-2-velocidad"></a><a href="#parte-2-velocidad" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parte 2: Velocidad</h3>
+<p><strong>Código</strong></p>
+<pre><code class="hljs"><span class="hljs-keyword">int</span> m1 = <span class="hljs-number">8</span>;
+<span class="hljs-keyword">int</span> pot = A0;
+<span class="hljs-keyword">int</span> speed;
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">setup</span>(){
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+  <span class="hljs-built_in">pinMode</span>(m1, <span class="hljs-literal">OUTPUT</span>);
+  <span class="hljs-built_in">pinMode</span>(pot, <span class="hljs-literal">INPUT</span>);
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-built_in">loop</span>(){
+  speed = (<span class="hljs-built_in">analogRead</span>(pot)/<span class="hljs-number">4</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(<span class="hljs-string">"speed: \n "</span>);
+  <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">print</span>(speed);
+
+  <span class="hljs-built_in">analogWrite</span>(m1, speed);
+
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="esquema-de-montaje-1"></a><a href="#esquema-de-montaje-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Esquema de Montaje</h3>
+<p><img src="https://lh3.google.com/u/0/d/19JO2C6iI8J1UvHg5NFagifuBuR3ut2Gp=w2880-h1578-iv2" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="anexos"></a><a href="#anexos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anexos</h2>
+<h3><a class="anchor" aria-hidden="true" id="que-es-un-motor-de-corriente-continua"></a><a href="#que-es-un-motor-de-corriente-continua" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un motor de corriente contínua?</h3>
+<p><code>El motor de corriente continua, denominado también motor de corriente directa, motor CC o motor DC (por las iniciales en inglés direct current), es una máquina que convierte energía eléctrica en mecánica, provocando un movimiento rotatorio, gracias a la acción de un campo magnético.</code></p>
+<p>Un motor de corriente continua se compone principalmente de dos partes. El estátor da soporte mecánico al aparato y contiene los polos de la máquina, que pueden ser o bien devanados de hilo de cobre sobre un núcleo de hierro, o imanes permanentes. El rotor es generalmente de forma cilíndrica, también devanado y con núcleo, alimentado con corriente directa a través de delgas, que están en contacto alternante con escobillas fijas.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LAtPHANEfQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3><a class="anchor" aria-hidden="true" id="que-es-un-puente-h"></a><a href="#que-es-un-puente-h" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>¿Qué es un puente H?</h3>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_sentido_de_giro.png" alt=""></p>
+<p><code>Sentido horario o anti-horario de un motor DC según la polaridad de la alimentación.</code></p>
+<p>En los motores de corriente continua, la dirección de giro de los mismos depende de la polaridad de la alimentación. Para poder cambiar dicha polaridad, sin necesidad de invertir la batería, se pueden usar 4 interruptores conectados como indicado en la figura.</p>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_puente_con_interruptores0.png" alt=""></p>
+<p><code>Puente &quot;H&quot; hecho con interruptores.</code></p>
+<p>Este tipo de conexión se conoce como &quot;Puente H&quot; (por la forma del circuito que se asemeja a la letra &quot;H&quot;) y posee propiedades muy interesantes que veremos a lo largo de este artículo.</p>
+<p>Si activamos el interruptor alto de la izquierda y el interruptor bajo de la derecha, el motor quedará alimentado con el positivo a la izquierda y el negativo a la derecha, por lo tanto girará en un modo (la circulación de la corriente se encuentra indicada con las líneas de color rojo y las flechas).</p>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_puente_con_interruptores_giro_orario.png" alt=""></p>
+<p><code>Motor con giro horario en un puente &quot;H&quot; hecho con interruptores.</code></p>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_puente_con_interruptores_giro_antiorario.png" alt=""></p>
+<p><code>Motor con giro anti-horario en un puente &quot;H&quot; hecho con interruptores.</code></p>
+<p>Este sistema tiene un inconveniente: si se accionan contemporáneamente los dos interruptores de la izquierda  o los dos interruptores de la derecha se producirá un cortocircuito de la alimentación como podemos observar en la figura, por lo tanto es necesario evitar esta situación como veremos más adelante.</p>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_puente_con_interruptores_corto.png" alt=""></p>
+<p><code>Cortocircuito de la alimentación en un puente &quot;H&quot; hecho con interruptores.</code></p>
+<p>Una condición interesante de este sistema es cuando accionamos solamente los dos interruptores de arriba, en ese caso el motor no se encuentra alimentado por la batería y además sus terminales de entrada estarán unidos entre si, a través de los interruptores. Este tipo de conexión mantiene el motor &quot;frenado&quot; y puede llegar a ser de utilidad en muchos casos. Lo mismo ocurre si en lugar de los dos interruptores altos, activamos ambos interruptores bajos.</p>
+<p><img src="https://www.inventable.eu/wp-content/uploads/2017/05/motor_dc_puente_con_interruptores_bloqueado.png" alt=""></p>
+<p><code>Motor frenado en un puente &quot;H&quot; hecho con interruptores.</code></p>
+<p>Naturalmente, un puente hecho solo con interruptores no es muy versátil, he dado este ejemplo para comprender en modo simple y claro el principio de funcionamiento del puente &quot;H&quot;. Pero si reemplazamos los interruptores mecánicos por interruptores electrónicos, la cuestión se pone interesante porque estos interruptores electrónicos pueden ser activados por circuitos lógicos como por ejemplo las salidas de un microcontrolador.</p>
+<h2><a class="anchor" aria-hidden="true" id="fuente"></a><a href="#fuente" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fuente:</h2>
+<ul>
+<li><a href="http://ohhmyproject.blogspot.com/2015/09/tutorial-l293d-motor-driver-with-arduino.html">http://ohhmyproject.blogspot.com/2015/09/tutorial-l293d-motor-driver-with-arduino.html</a></li>
+<li><a href="https://www.inventable.eu/2017/05/26/funciona-puente-motores-corriente-continua/">https://www.inventable.eu/2017/05/26/funciona-puente-motores-corriente-continua/</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Motor_de_corriente_continua">https://es.wikipedia.org/wiki/Motor_de_corriente_continua</a></li>
+<li><a href="https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/">https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/</a></li>
+<li><a href="https://www.arduino.cc/en/tutorial/potentiometer">https://www.arduino.cc/en/tutorial/potentiometer</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/arduino_docs/docs/es/2_ejercicio_dos"><span class="arrow-prev">← </span><span>Ejercicio 2: &quot;Ultrasonic Distance Sensor&quot;</span></a><a class="docs-next button" href="/arduino_docs/docs/es/4_ejercicio_cuatro"><span>Ejercicio 4: &quot;Conexión de un Servomotor&quot;</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ejercicio-3-velocidad-y-direccion-de-un-motor-cc">Ejercicio 3: &quot;Velocidad y Dirección de un Motor CC&quot;</a><ul class="toc-headings"><li><a href="#objetivo-general">Objetivo General</a></li><li><a href="#materiales">Materiales</a></li><li><a href="#intro">Intro</a></li><li><a href="#parte-1-direccion">Parte 1: Dirección</a></li><li><a href="#esquema-de-montaje">Esquema de Montaje</a></li><li><a href="#parte-2-velocidad">Parte 2: Velocidad</a></li><li><a href="#esquema-de-montaje-1">Esquema de Montaje</a></li></ul></li><li><a href="#anexos">Anexos</a><ul class="toc-headings"><li><a href="#que-es-un-motor-de-corriente-continua">¿Qué es un motor de corriente contínua?</a></li><li><a href="#que-es-un-puente-h">¿Qué es un puente H?</a></li></ul></li><li><a href="#fuente">Fuente:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/arduino_docs/" class="nav-home"><img src="/arduino_docs/img/favicon.png" alt="Arduino Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/arduino_docs/docs/en/es/0_inicio">Inicio</a><a href="/arduino_docs/docs/en/en/0_getting-started">Getting started</a></div><div></div><div><h5>More</h5><a href="/arduino_docs/blog">Blog</a><a href="https://github.com/cristianemoyano/arduino_docs">GitHub</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/arduino_docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">2019 Cristian Moyano</section></footer></div></body></html>
